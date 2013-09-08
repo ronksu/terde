@@ -1,0 +1,63 @@
+Apps4Finland 2013
+Ke 21.8., Nellu Pub
+
+Paikalla:
+Mika, Topi, Juha, Mert, Laura
+Poissa: Timo
+ 
+
+
+GIS-Aineisto
+
+Aluerajaus Kallio, Helsinki
+
+Auringon kulku (Laura) tarkistaa, onko ArcGIS:ssä valmiiksi mallinnettu. Muuten etsitään netistä.
+
+Laserkeilaus (Mika) tsekkaa, saako laserkeilausaineistosta interpoloitua järkevää 3D aineistoa. Topi laittoi kokouksen jälkeen postia, että Esrilla on rajapintapalveluna rakennukset polygonina. Täytyy tarkistaa, pystyykö Esrin aineistoa hyväksi käyttäen muodostamaan valo-varjoanalyysin. 
+
+Rakennusviraston terdeaineisto (Topi) kysyy, onko avoimena aineistona saatavilla. Jos ei -> Valvira. Jos ei sekään, Laura lähtee kartoittamaan. Myöhemmin Topi postissaan laittoi, että Tanja Lahti HRI:ltä selvittää asiaa rakennusvirastolta (Hgin).
+
+Sää (Laura) selvittää, onko Ilmatieteenlaitoksen avatusta 4 tunnin ennusteesta tehty "cross-domain-ystävällistä"-appia. Jos ei, pitää etsiä netistä hyvä sellainen sääappi ja toimittaa Juhalle. Tämä tulee erilliseksi oikeanpuolisesta palkista.
+
+Analyysin pisteaineisto (Laura, Mika, Juha, Topi) mietitään, mitä kaikkia ominaisuustietoja pisteaineisto imee ja missä muodossa aineisto on. Laura tarkisti, että GIS-aineiston saa JSON tiedostomuotoon, josta Juha puhui. Täytyy opetella tietorakenne. Ominaisuustietoina seuraavat sarakkeet: juottolan nimi, osoite, 6-8 saraketta paistamisen tilasta 6-8 tunnilta, terden neliöt (?), a-oikeus(?), nettisivuston url, aukioloajat. Mietitään vielä parasta formaattia.
+
+
+
+Kehittämisympäristö
+
+GitHub (Juha) perustaa Terde-kehittämissivun, jolla voidaan seurata projektin kehittymistä. GitHub on siis paikka, missä yleensä tämäntyyppisiä projekteja vedetään.
+
+
+Nettisivusto
+
+Leiska (Mert) tekee pari luonnosta kaikille layoutista, mutta lähinnä Juhalle "styleguideksi". Styleguideen kuuluu värimaailman, fonttien, marginaalien jne. suunnittelu. Mert lupasi yrittää tehdä viikko ennen seuraavaa tapaamista. 
+
+
+Nettisivuston rakentaminen (Juha ja Timo) tarvitsevat leiskan ja sääapin toteutuksen aloittamiseen. Ei facea jakokanavaksi nyt.
+
+"Oikeanpuolisessa palkissa" hakukenttä osoitteella, listana esim. 5 lähintä terdeä, joista jokaiselle valo-varjopalkki 6-8h eteenpäin (3 vaihtoehtoa kullekin tunnille pisteaineistossa: paistaa, ehkä paistaa, ei paista) ja kai jokaisen osoite ja aukioloaika. Mert miettii markerit eli symbolit valo-tilanteelle. Mainostila palkkiin viimeseksi (?). 
+
+GoogleMapsia käytetään ainakin beta-versiossa, koska tarvittavat osoitehakutoiminnot löytyvät ja helpoin upottaa nettisivustoon. Terdepistettä klikattaessa saa terden nimen, aurinkopalkin, aukiolon, osoitteen. Mitä näkyy, kun vie kursorin päälle karttavinkissä ja mitä taas napsauttamalla pistettä? Juhan ja Timon koodaamisen kannalta joku järkevä ratkaisu. Tarvitseeko kursorin päälleviennissä näkyä vielä mitään? Miten toimii eri laitteissa? 
+
+
+
+Visio2020!
+
+Asuntojen ostoon kuinka monta tuntia huoneistoon paistaa arska. Ostaja saa itse mietiskellä huoneiston sijainnin seinällä, ellei ole jo siihen mennessä pätevää 3D reaalikatukuva-sijaintiaineistoa Gissattavaksi. Myydään oikotielle yms. 
+
+24/7/365 liukuva valo-varjomallinnus, koko Suomi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
