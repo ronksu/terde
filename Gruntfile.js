@@ -381,6 +381,15 @@ module.exports = function (grunt) {
         'mocha'
     ]);
 
+    grunt.registerTask('livetest', [
+        'clean:server',
+        'concurrent:test',
+        'autoprefixer',
+        'connect:test',
+        'open',
+        'watch'
+    ]);
+
     grunt.registerTask('build', [
         'clean:dist',
         'useminPrepare',
