@@ -9,6 +9,11 @@ describe "Ajax mock test", ->
       contentType: "text/json"
       responseText: { bar: 42 }
 
+    $.mockjax
+      url: '/geoproxy',
+      contentType: "text/json"
+      proxy: 'data/geo.json'
+
   afterEach ->
     $.mockjaxClear()
 
@@ -20,4 +25,13 @@ describe "Ajax mock test", ->
     request.done (data) ->
       expect(data).to.be.an('object').and.to.deep.equal({bar: 42})
       done()
+
+  it "proxy test", (done) ->
+    request = $.ajax
+      url: '/geoproxy'
+      dataType: 'json'
+
+    request.done (data) ->
+      done()
+
 
