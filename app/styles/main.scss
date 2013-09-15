@@ -3,11 +3,14 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'bootstrap/bootstrap';
 
 body {
-    padding: 60px 0;
+  padding: 60px 0;
+
+  // Spacings
+  .header, #main, .footer {
+    margin-bottom: 35px;
+  }
 
   .header {
-    margin-bottom: 35px;
-
     h4 {
       color: $terde-white;
     }
@@ -17,8 +20,10 @@ body {
     border-radius: 12px;
 
     // @TODO remove placeholder
-    border: 1px solid black;
-    min-height: 20px;
+    &.placeholder {
+      border: 1px solid black;
+      min-height: 20px;
+    }
 
 
     @media (max-width: $screen-sm-max) {
@@ -41,6 +46,14 @@ body {
       & > .row > div {
         float: left;
       }
+    }
+  }
+
+  .footer {
+    p {
+      float: right;
+      color: $terde-white;
+      text-transform: uppercase;
     }
   }
 }
