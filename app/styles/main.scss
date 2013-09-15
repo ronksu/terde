@@ -15,9 +15,33 @@ body {
 
   .row > div > .content {
     border-radius: 12px;
-    border: 1px solid black;
 
+    // @TODO remove placeholder
+    border: 1px solid black;
     min-height: 20px;
+
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: $padding-large-vertical;
+    }
+
+    &.weather {
+      width: 130px;
+      padding: $padding-large-vertical 0;
+      background-color: $terde-white;
+      
+      @media (max-width: $screen-sm-max) {
+        float: right;
+      }
+
+      .icon {
+        padding-left: $padding-small-horizontal;
+      }
+
+      & > .row > div {
+        float: left;
+      }
+    }
   }
 }
 
