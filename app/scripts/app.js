@@ -1,6 +1,9 @@
 /*global define */
-define([], function () {
-    'use strict';
+define(['map'], function (map) {
 
-    return '\'Allo \'Allo!';
+    var init = function() {
+        map.init();
+    }
+
+    return {init: init};
 });
