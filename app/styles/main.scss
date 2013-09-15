@@ -25,9 +25,22 @@ body {
       min-height: 20px;
     }
 
-
     @media (max-width: $screen-sm-max) {
       margin-top: $padding-large-vertical;
+    }
+
+    &.map {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+
+      #map {
+        // @TODO not working in Chrome: https://github.com/Leaflet/Leaflet/issues/1549
+        border-radius: 12px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.weather {

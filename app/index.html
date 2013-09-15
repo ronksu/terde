@@ -10,8 +10,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
+
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -32,7 +34,9 @@
             <div rel="main" id="main">
                 <div class="row">
                     <div class="col-md-7 col-sm-8 col-md-push-2">
-                        <div class="content placeholder">MAP</div>
+                        <div class="content map">
+                            <div id="map"></div>
+                        </div>
                     </div>
 
                     <div class="col-md-3 col-sm-4 col-md-push-2">
@@ -78,6 +82,13 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- @TODO AMDize -->
+        <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+        <script type='text/javascript'>
+            var map = L.mapbox.map('map', 'lacation.map-soa2wal6')
+                    .setView([40, -74.50], 9);
         </script>
 
         <!-- build:js scripts/main.js -->
