@@ -7,20 +7,28 @@
 </head>
 <body>
     <div id="mocha"></div>
+
+    <!-- include test framework -->
     <script src="lib/mocha/mocha.js"></script>
-    <!-- @TODO AMD'ize -->
+    <script>mocha.setup('bdd')</script>
+
+    <!-- include jquery for conveniency -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/jquery-mockjax/jquery.mockjax.js"></script>
-    <script>mocha.setup('bdd')</script>
+
     <!-- assertion framework -->
     <script src="lib/chai.js"></script>
     <script>var expect = chai.expect</script>
 
-    <!-- include source files here... -->
+    <!-- include RequireJs testconfig -->
+    <script data-main="spec/testconfig" src="bower_components/requirejs/require.js"></script>
 
-    <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
+    <!-- run tests -->
+    <script type="text/javascript">
+        require(['sampleTest'], function () {
+            mocha.run();
+        });
+    </script>
 
-    <script>mocha.run()</script>
 </body>
 </html>

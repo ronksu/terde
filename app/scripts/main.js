@@ -12,7 +12,7 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox',
-        knockout: '../bower_components/knockout/knockout-2.3.0.debug',
+        knockout: '../bower_components/knockout/knockout',
         knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping'
     },
     shim: {
