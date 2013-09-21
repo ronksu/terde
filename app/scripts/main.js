@@ -11,7 +11,9 @@ require.config({
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
-        mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox'
+        mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox',
+        knockout: '../bower_components/knockout/knockout-2.3.0.debug',
+        knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping'
     },
     shim: {
         bootstrapAffix: {
@@ -47,6 +49,10 @@ require.config({
         mapBox: {
             exports: 'L'
         }
+    },
+    deps: ['knockout', 'knockoutMapping'],
+    callback: function(ko, mapping) {
+        ko.mapping = mapping;
     }
 });
 
