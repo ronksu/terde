@@ -126,7 +126,7 @@ module.exports = function (grunt) {
             all: {
                 options: {
                     log: true,
-                    run: true,
+                    run: false,
                     urls: ['http://localhost:<%= connect.options.port %>/index.html']
                 }
             }
