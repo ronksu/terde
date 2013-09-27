@@ -1,3 +1,4 @@
+/*global define:false, jQuery:false*/
 define('jquery', [], function() { return jQuery; });
 
 require.config({
@@ -5,7 +6,7 @@ require.config({
         // @TODO mock
         mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox',
         knockout: '../bower_components/knockout/knockout-2.3.0.debug',
-        knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping'
+        knockoutMapping: '../bower_components/knockout-mapping/build/output/knockout.mapping-latest.debug'
     },
     shim: {
         mapBox: {
