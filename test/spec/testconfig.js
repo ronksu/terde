@@ -5,8 +5,9 @@ require.config({
     paths: {
         // @TODO mock
         mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox',
-        knockout: '../bower_components/knockout/knockout-2.3.0.debug',
-        knockoutMapping: '../bower_components/knockout-mapping/build/output/knockout.mapping-latest.debug'
+        knockout: '/bower_components/knockout/knockout-2.3.0.debug',
+        knockoutMapping: '/bower_components/knockout-mapping/build/output/knockout.mapping-latest.debug',
+        lodash: '/bower_components/lodash/dist/lodash'
     },
     shim: {
         mapBox: {
