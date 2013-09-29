@@ -1,13 +1,14 @@
-define ['jquery', 'knockout'], ($, ko) ->
+define ['jquery', 'knockout', 'lodash'], ($, ko, _) ->
   class terdeViewModel
     constructor: () ->
-      @locationData = ko.mapping.fromJS [1]
+      @locationData = ko.observable()
 
       @terdeDataMapping =
         key: (item) ->
           item
         create: (data) ->
-          ko.observable(data.data.features)
+          _.map data.data.features, (feature) ->
+            ko.observable feature
 
     init: () ->
       # @TODO separate to own component
@@ -16,7 +17,7 @@ define ['jquery', 'knockout'], ($, ko) ->
         dataType: 'json'
 
       mapDataRequest.done (data) =>
-        ko.mapping.fromJS [data], @locationData
+        ko.mapping.fromJS [data], @terdeDataMapping, @locationData
 
       mapDataRequest.fail (jqXHR, textStatus, errorThrown) ->
         # @TODO fail nicely
