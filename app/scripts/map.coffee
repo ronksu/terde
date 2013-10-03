@@ -10,7 +10,8 @@ define ['mapBox', 'lodash'], (L, _) ->
       .on 'locationfound', (e) ->
         # radius = e.accuracy / 4?
         if _.isUndefined position
-          position = L.circle(e.latlng, 2, {
+          position = L.circleMarker(e.latlng, {
+            radius: 5,
             color: '#fff',
             opacity: 1,
             weight: 2,
