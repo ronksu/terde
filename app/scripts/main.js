@@ -11,7 +11,6 @@ require.config({
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
-        mapBox: 'http://api.tiles.mapbox.com/mapbox.js/v1.0.2/mapbox',
         knockout: '../bower_components/knockout/knockout',
         knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping',
         lodash: '../bower_components/lodash/dist/lodash.min'
@@ -46,9 +45,6 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
-        },
-        mapBox: {
-            exports: 'L'
         }
     },
     deps: ['knockout', 'knockoutMapping'],
