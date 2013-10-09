@@ -1,0 +1,1735 @@
+{
+    "type": "FeatureCollection",
+
+    "features": [
+        {
+            "type": "Feature",
+            "id": 0,
+            "properties": {
+                "nimi": "K*rvi",
+                "pisteen_os": "Kulmavuorenkatu 2, Helsinki",
+                "asiakaspai": 50,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778974.7453466929, 8441798.2495046072 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 1,
+            "properties": {
+                "nimi": "Mardin Pub",
+                "pisteen_os": "Mäkelänkatu 15, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778659.2312215185, 8442742.4775023423 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 2,
+            "properties": {
+                "nimi": "Naurava Härkä",
+                "pisteen_os": "Kirjurinkatu 4, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2776080.0035537137, 8444359.3563346993 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 3,
+            "properties": {
+                "nimi": "Porvoonkadun Baari",
+                "pisteen_os": "Porvoonkatu 21, Helsinki",
+                "asiakaspai": 10,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2776942.5517026251, 8442369.4691614732 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 4,
+            "properties": {
+                "nimi": "Thai Fast Food Du Dii",
+                "pisteen_os": "Viides linja 7, Helsinki",
+                "asiakaspai": 5,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777881.6265377551, 8440608.017780276 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 5,
+            "properties": {
+                "nimi": "Cafe 5. Linja",
+                "pisteen_os": "Viides linja 9, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777847.7778868866, 8440632.0825637914 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 6,
+            "properties": {
+                "nimi": "Pub Porthan",
+                "pisteen_os": "Porthaninkatu 10, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777739.4381632931, 8440631.2314422242 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 7,
+            "properties": {
+                "nimi": "Talon Cafe",
+                "pisteen_os": "Hämeentie 2, Helsinki",
+                "asiakaspai": 10,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777483.7695448836, 8439978.0860599689 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 8,
+            "properties": {
+                "nimi": "Hakaniemen Jäätelökioski",
+                "pisteen_os": null,
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777636.3761959816, 8439631.1083470173 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 9,
+            "properties": {
+                "nimi": "Suomen Kaupunkikioskit Hakaniemen tori",
+                "pisteen_os": null,
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777636.992831998, 8439695.4467577767 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 10,
+            "properties": {
+                "nimi": "Rento Bar & Bistro",
+                "pisteen_os": "Hakaniemenkatu 7, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777953.5207760823, 8439679.1588526983 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 11,
+            "properties": {
+                "nimi": "M\/S Ravintolalaiva Maria",
+                "pisteen_os": null,
+                "asiakaspai": 50,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777734.3219812438, 8439487.4398054834 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 12,
+            "properties": {
+                "nimi": "Rosso Ympyrätalo",
+                "pisteen_os": null,
+                "asiakaspai": 112,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777257.5126302149, 8439929.8474097252 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 13,
+            "properties": {
+                "nimi": "Da Vinci Pizzeria",
+                "pisteen_os": "Siltasaarenkatu 11, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777408.1157720797, 8440003.8826911915 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 14,
+            "properties": {
+                "nimi": "Kotipizza",
+                "pisteen_os": "Porthaninkatu 11, Helsinki",
+                "asiakaspai": 2,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777743.7209843593, 8440590.1619174741 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 15,
+            "properties": {
+                "nimi": "Karhupuisto Virvoitusjuomakioski",
+                "pisteen_os": "Karhupuisto, Helsinki",
+                "asiakaspai": 18,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777739.4520359151, 8440838.2737256624 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 16,
+            "properties": {
+                "nimi": "Sivukirjasto",
+                "pisteen_os": "Fleminginkatu 5, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777780.3183499193, 8440898.8455062397 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 17,
+            "properties": {
+                "nimi": "Kallion Seurahuone",
+                "pisteen_os": "Fleminginkatu 6, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777736.0669182101, 8441064.3205650132 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 18,
+            "properties": {
+                "nimi": "Cella",
+                "pisteen_os": "Fleminginkatu 17, Helsinki",
+                "asiakaspai": 25,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777794.6871697437, 8441406.8706051968 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 19,
+            "properties": {
+                "nimi": "Nalle Pub",
+                "pisteen_os": "Kaarlenkatu 5, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777612.0494681774, 8440986.0808829479 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 20,
+            "properties": {
+                "nimi": "Cafe Del Mar",
+                "pisteen_os": "Viides linja 16, Helsinki",
+                "asiakaspai": 4,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777592.3729589516, 8440779.4286544193 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 21,
+            "properties": {
+                "nimi": "5th Street Bar & Cafe",
+                "pisteen_os": "Viides linja 7, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777899.5257877279, 8440593.994713923 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 22,
+            "properties": {
+                "nimi": "Bullut",
+                "pisteen_os": "Viides linja 2, Helsinki",
+                "asiakaspai": 15,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777945.9605109873, 8440506.9990602303 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 23,
+            "properties": {
+                "nimi": "Taverna Zorbas",
+                "pisteen_os": "Läntinen Brahenkatu 4, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777223.6581325051, 8441603.1956678666 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 24,
+            "properties": {
+                "nimi": "Romano",
+                "pisteen_os": "Läntinen Brahenkatu 4, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777219.2464375785, 8441648.3089904636 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 25,
+            "properties": {
+                "nimi": "Chico's Kallio",
+                "pisteen_os": "Kolmas linja 9, Helsinki",
+                "asiakaspai": 25,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777505.325817578, 8440350.6029269546 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 26,
+            "properties": {
+                "nimi": "Oiva",
+                "pisteen_os": "Porthaninkatu 5, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777556.5086471299, 8440350.1835338045 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 27,
+            "properties": {
+                "nimi": "Cafe Harlekiini",
+                "pisteen_os": "Porthaninkatu 5, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777587.3949544313, 8440389.3287381064 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 28,
+            "properties": {
+                "nimi": "Beaver Bar",
+                "pisteen_os": "Porthaninkatu 9, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777718.6320095537, 8440558.2344151363 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 29,
+            "properties": {
+                "nimi": "Hakis Pub Gazal",
+                "pisteen_os": "Näkinkuja 7, Helsinki",
+                "asiakaspai": 15,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777979.9571634815, 8439829.7106790654 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 30,
+            "properties": {
+                "nimi": "Chili Fast Food Restaurant Siltasaarenkatu",
+                "pisteen_os": "Siltasaarenkatu 11, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777403.2503096401, 8440083.114148112 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 31,
+            "properties": {
+                "nimi": "Rytmi",
+                "pisteen_os": "Toinen linja 5, Helsinki",
+                "asiakaspai": 28,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777415.0406722291, 8440123.6753428224 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 32,
+            "properties": {
+                "nimi": "Sävel",
+                "pisteen_os": "Toinen linja 2, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777527.0666788006, 8440037.7225793619 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 33,
+            "properties": {
+                "nimi": "Ravintola Sivuraide",
+                "pisteen_os": "Hämeentie 56, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778757.6920954781, 8441677.9494380485 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 34,
+            "properties": {
+                "nimi": "Kurvitar",
+                "pisteen_os": "Hämeentie 62, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778883.4717577519, 8441764.2757280879 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 35,
+            "properties": {
+                "nimi": "William K. Kurvi",
+                "pisteen_os": "Hämeentie 52, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778685.8781606783, 8441598.3395765796 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 36,
+            "properties": {
+                "nimi": "Lounas-Kahvila",
+                "pisteen_os": "Läntinen Brahenkatu 6, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777217.7876827712, 8441727.6641114131 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 37,
+            "properties": {
+                "nimi": "Cafe Kallion Cardemumma",
+                "pisteen_os": "Kaarlenkatu 15, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777606.9998849137, 8441375.9005927742 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 38,
+            "properties": {
+                "nimi": "Villipuutarha",
+                "pisteen_os": "Kaarlenkatu 15, Helsinki",
+                "asiakaspai": 26,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777596.9709095801, 8441375.5888504982 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 39,
+            "properties": {
+                "nimi": "Roskapankki",
+                "pisteen_os": "Helsinginkatu 20, Helsinki",
+                "asiakaspai": 44,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777605.226554594, 8441433.1411172599 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 40,
+            "properties": {
+                "nimi": "Bar 21",
+                "pisteen_os": "Helsinginkatu 21, Helsinki",
+                "asiakaspai": 25,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777718.1882242481, 8441512.0475724116 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 41,
+            "properties": {
+                "nimi": "Tenkka",
+                "pisteen_os": "Helsinginkatu 15, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777947.8273875364, 8441549.3250962812 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 42,
+            "properties": {
+                "nimi": "Kallion Pääkonttori",
+                "pisteen_os": "Helsinginkatu 11, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778127.4971824614, 8441580.0383519605 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 43,
+            "properties": {
+                "nimi": "Bud's Pizzeria",
+                "pisteen_os": "Helsinginkatu 9, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778164.4192559663, 8441587.2166885529 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 44,
+            "properties": {
+                "nimi": "Lepakkomies",
+                "pisteen_os": "Helsinginkatu 1, Helsinki",
+                "asiakaspai": 22,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778487.8030114202, 8441643.4728943352 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 45,
+            "properties": {
+                "nimi": "Mimin Herkut",
+                "pisteen_os": "Pengerkatu 24, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778504.6135167726, 8441586.6962535884 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 46,
+            "properties": {
+                "nimi": "Kuikka",
+                "pisteen_os": "Helsinginkatu 32, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777037.2168186568, 8441338.0770543981 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 47,
+            "properties": {
+                "nimi": "Iltakoulu",
+                "pisteen_os": "Vaasankatu 5, Helsinki",
+                "asiakaspai": 22,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778571.2067783722, 8441782.7533229552 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 48,
+            "properties": {
+                "nimi": "Hilpeä Hauki",
+                "pisteen_os": "Vaasankatu 7, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778500.3286279128, 8441790.615015259 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 49,
+            "properties": {
+                "nimi": "Apollo Pizzeria",
+                "pisteen_os": "Vaasankatu 8, Helsinki",
+                "asiakaspai": 10,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778277.5372023, 8441777.6799925361 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 50,
+            "properties": {
+                "nimi": "Kallion Bar 12",
+                "pisteen_os": "Vaasankatu 12, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778139.5286144344, 8441775.4126336817 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 51,
+            "properties": {
+                "nimi": "City Kebab",
+                "pisteen_os": "Vaasankatu 17, Helsinki",
+                "asiakaspai": 10,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778110.3175130212, 8441811.6934574489 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 52,
+            "properties": {
+                "nimi": "Tuk Tuk",
+                "pisteen_os": "Vaasankatu 17, Helsinki",
+                "asiakaspai": 4,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778154.8599267313, 8441812.0692294426 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 53,
+            "properties": {
+                "nimi": "Populus",
+                "pisteen_os": "Aleksis Kiven katu 20, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777979.8123484636, 8441994.60692399 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 54,
+            "properties": {
+                "nimi": "Siima Baari",
+                "pisteen_os": "Vaasankatu 25, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777918.1175347404, 8441808.746559076 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 55,
+            "properties": {
+                "nimi": "Molotow",
+                "pisteen_os": "Vaasankatu 29, Helsinki",
+                "asiakaspai": 19,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777799.3031284814, 8441809.0797799099 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 56,
+            "properties": {
+                "nimi": "Bullman",
+                "pisteen_os": "Fleminginkatu 21, Helsinki",
+                "asiakaspai": 13,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777777.595185841, 8441732.0009007584 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 57,
+            "properties": {
+                "nimi": "Bar Cafe Flemari",
+                "pisteen_os": "Fleminginkatu 21, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777782.8814386558, 8441690.9563879278 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 58,
+            "properties": {
+                "nimi": "Pub Fairytale",
+                "pisteen_os": "Helsinginkatu 7, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778245.2756870883, 8441600.7645057198 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 59,
+            "properties": {
+                "nimi": "Viva La Vida",
+                "pisteen_os": "Vaasankatu 20, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777890.7409492354, 8441772.7211097702 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 60,
+            "properties": {
+                "nimi": "Heinähattu",
+                "pisteen_os": "Vaasankatu 23, Helsinki",
+                "asiakaspai": 18,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777975.8678894029, 8441810.5389963184 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 61,
+            "properties": {
+                "nimi": "Ravintola Sture",
+                "pisteen_os": "Mäkelänkatu 28, Helsinki",
+                "asiakaspai": 35,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778199.5336970934, 8443094.1889245398 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 62,
+            "properties": {
+                "nimi": "Allotria",
+                "pisteen_os": null,
+                "asiakaspai": 38,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778981.462801157, 8442199.5371985175 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 63,
+            "properties": {
+                "nimi": "Bar Flagon",
+                "pisteen_os": "Vilhonvuorenkatu 5, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2779038.756967274, 8441590.1422690675 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 64,
+            "properties": {
+                "nimi": "Taz",
+                "pisteen_os": "Aleksis Kiven katu 40, Helsinki",
+                "asiakaspai": 20,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777361.2193361614, 8442227.6976246517 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 65,
+            "properties": {
+                "nimi": "Alppilan Kultainen Kulaus",
+                "pisteen_os": "Viipurinkatu 2, Helsinki",
+                "asiakaspai": 25,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777257.0952644451, 8442319.9540904872 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 66,
+            "properties": {
+                "nimi": "Kultapalmu",
+                "pisteen_os": "Vaasankatu 4, Helsinki",
+                "asiakaspai": 9,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778426.8120088018, 8441766.2154766433 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 67,
+            "properties": {
+                "nimi": "Kalliohovi",
+                "pisteen_os": "Vaasankatu 17, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778196.5940587325, 8441812.357664438 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 68,
+            "properties": {
+                "nimi": "Relaxin",
+                "pisteen_os": "Helsinginkatu 15, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778000.1119617084, 8441558.9921489879 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 69,
+            "properties": {
+                "nimi": "Mo'de",
+                "pisteen_os": "Viipurinkatu 18, Helsinki",
+                "asiakaspai": 18,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2776494.3877181532, 8442399.7133273277 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 70,
+            "properties": {
+                "nimi": "Paussi",
+                "pisteen_os": "Viipurinkatu 14, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2776638.2812523143, 8442388.115834197 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 71,
+            "properties": {
+                "nimi": "Coffee Bean Helsinki",
+                "pisteen_os": "Elimäenkatu 9, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777504.298959008, 8443038.4042124581 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 72,
+            "properties": {
+                "nimi": "Dong Hai",
+                "pisteen_os": "Kajaaninkatu 4, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2776922.9366333545, 8442509.592831552 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 73,
+            "properties": {
+                "nimi": "Bar Mucava",
+                "pisteen_os": "Hämeentie 32, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778378.7351644253, 8440736.5052809119 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 74,
+            "properties": {
+                "nimi": "Pikku-Vallila",
+                "pisteen_os": "Keuruuntie 1, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778426.261467061, 8442616.6316979378 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 75,
+            "properties": {
+                "nimi": "Prankkari",
+                "pisteen_os": "Kaarlenkatu 1, Helsinki",
+                "asiakaspai": 24,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777616.2978199651, 8440900.7876228672 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 76,
+            "properties": {
+                "nimi": "Kulmakahvio",
+                "pisteen_os": "Agricolankatu 13, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777637.4090259676, 8440880.3289009258 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 77,
+            "properties": {
+                "nimi": "Mukesh",
+                "pisteen_os": "Sturenkatu 28, Helsinki",
+                "asiakaspai": 16,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778114.9921588586, 8443120.7144401968 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 78,
+            "properties": {
+                "nimi": "Leijona",
+                "pisteen_os": "Helsinginkatu 4, Helsinki",
+                "asiakaspai": 12,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778582.4301957092, 8441601.171899341 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 79,
+            "properties": {
+                "nimi": "LiLin herkku",
+                "pisteen_os": "Vilhonvuorenkuja 20, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2779131.9310713895, 8441516.6376653966 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 80,
+            "properties": {
+                "nimi": "Sandro",
+                "pisteen_os": "Kolmas linja 17, Helsinki",
+                "asiakaspai": 26,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777185.3629980423, 8440605.9550425131 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 81,
+            "properties": {
+                "nimi": "Good Life Coffee",
+                "pisteen_os": "Kolmas linja 17, Helsinki",
+                "asiakaspai": 6,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777236.790898425, 8440565.3484044559 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 82,
+            "properties": {
+                "nimi": "Fafa's",
+                "pisteen_os": "Vilhonvuorenkatu 8, Helsinki",
+                "asiakaspai": 0,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2779234.0202377466, 8441505.711324444 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 83,
+            "properties": {
+                "nimi": "Galleria Kioski Cafe",
+                "pisteen_os": "Siltasaarenkatu 1, Helsinki",
+                "asiakaspai": 2,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777424.516268333, 8439333.1113457568 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 84,
+            "properties": {
+                "nimi": "Scandic Paasi",
+                "pisteen_os": "Paasivuorenkatu 5, Helsinki",
+                "asiakaspai": 35,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777149.6939088814, 8439589.8499570843 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 85,
+            "properties": {
+                "nimi": "Kahvila-Ravintola Nuppu",
+                "pisteen_os": "Läntinen Brahenkatu 12, Helsinki",
+                "asiakaspai": 10,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777206.8879738715, 8441949.4818321615 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 86,
+            "properties": {
+                "nimi": "Made In Kallio",
+                "pisteen_os": "Vaasankatu 14, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778065.1947831288, 8441778.1350072268 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 87,
+            "properties": {
+                "nimi": "Kahvila Sävy",
+                "pisteen_os": "Aleksis Kiven katu 12, Helsinki",
+                "asiakaspai": 18,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778349.3884351691, 8441999.0476134662 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 88,
+            "properties": {
+                "nimi": "Lucky Bar",
+                "pisteen_os": "Fleminginkatu 25, Helsinki",
+                "asiakaspai": 0,
+                "shine": {
+                    "15": 0,
+                    "16": 0,
+                    "17": 0
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777727.0333477762, 8442003.8534945305 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 89,
+            "properties": {
+                "nimi": "Tsemppi Pub",
+                "pisteen_os": "Kirstinkatu 13, Helsinki",
+                "asiakaspai": 8,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2777062.4380284632, 8441818.3162550963 ]
+            }
+        }
+        ,
+        {
+            "type": "Feature",
+            "id": 90,
+            "properties": {
+                "nimi": "Aleksis K",
+                "pisteen_os": "Aleksis Kiven katu 14, Helsinki",
+                "asiakaspai": 30,
+                "shine": {
+                    "15": 1,
+                    "16": 1,
+                    "17": 1
+                }
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ 2778245.1179981804, 8441995.8162567541 ]
+            }
+        }
+
+    ]
+}
