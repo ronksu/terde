@@ -1,6 +1,24 @@
-define ['mapBox', 'lodash'], (L, _) ->
-  @map
-  init = () ->
+define ['lodash'], (_) ->
+
+  updateDataPoints = (layer, points) ->
+    # @TODO optimize to update only changed layers
+    layer.clearLayers();
+
+    _.each points, (point) ->
+      # @TODO add icon, more data, etc
+      layer.addLayer(L.marker(point.coordinates))
+
+  initDataLayer = (map, mapData) ->
+    dataLayer = L
+      .layerGroup()
+      .addTo(map)
+
+    updateDataPoints(dataLayer, mapData())
+
+    mapData.subscribe (points) ->
+      updateDataPoints(dataLayer, points)
+
+  init = (mapData) ->
     position = undefined
     map = L
       .mapbox
@@ -27,6 +45,6 @@ define ['mapBox', 'lodash'], (L, _) ->
       .on 'locationerror', (err) ->
         # @TODO initial helsinki is fine?
 
-    @map = map
+    initDataLayer(map, mapData)
 
   {init}

@@ -1,8 +1,12 @@
 /*global define */
-define(['map'], function (map) {
+define(['map', "AppViewModel"], function (map, AppViewModel) {
 
     var init = function() {
-        map.init();
+        // @TODO useless class constructions, refactor away
+        aVM = new AppViewModel()
+        aVM.init()
+
+        map.init(aVM.mapData);
     };
 
     return {init: init};
