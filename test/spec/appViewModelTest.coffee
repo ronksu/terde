@@ -3,7 +3,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
   describe "terde view model tests", ->
     beforeEach ->
       $.mockjax
-        url: '/geoproxy'
+        url: '/data/terassit_0101.json'
         contentType: "text/json"
         proxy: 'data/geo.json'
 

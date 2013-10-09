@@ -8,7 +8,7 @@
                 "coordinates": [102.0, 0.5]
             },
             "properties": {
-                "name": "terde1",
+                "nimi": "terde1",
                 "description": "description of terde1",
                 "shine": {
                     "12": "0",
@@ -28,7 +28,7 @@
                 "coordinates": [60.5, 0.5]
             },
             "properties": {
-                "name": "terde2",
+                "nimi": "terde2",
                 "description": "description of terde2",
                 "shine": {
                     "12": "3",
@@ -48,7 +48,7 @@
                 "coordinates": [15.5, 4.5]
             },
             "properties": {
-                "name": "terde3",
+                "nimi": "terde3",
                 "description": "description of terde3",
                 "shine": {
                     "12": "1",
@@ -68,7 +68,7 @@
                 "coordinates": [10.0, 20.5]
             },
             "properties": {
-                "name": "terde4",
+                "nimi": "terde4",
                 "description": "description of terde4",
                 "shine": {
                     "12": "0",

@@ -16,7 +16,7 @@ define ['jquery', 'knockout', 'lodash'], ($, ko, _) ->
         _.map extractedLocationData, (observable) =>
           item = observable()
 
-          name: item.properties.name
+          name: item.properties.nimi
           description: item.properties.description
           shine: parseInt(item.properties.shine[@clock()] ? 0)
           coordinates: item.geometry.coordinates
@@ -36,7 +36,7 @@ define ['jquery', 'knockout', 'lodash'], ($, ko, _) ->
         initClock(@clock)
 
       mapDataRequest = $.ajax
-        url: '/geoproxy'
+        url: '/data/terassit_0101.json'
         dataType: 'json'
 
       mapDataRequest.done (data) =>
