@@ -2,20 +2,45 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'bootstrap/bootstrap';
 
-$section-margin: 35px;
+$section-margin: 20px;
+$section-margin-small: 15px;
+$section-margin-xsmall: 10px;
 
 body {
-  padding: 60px 0;
+  @media (min-width: $screen-sm) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding: 10px 0;
+  }
 
   // Spacings
   .header, #main, .footer {
-    margin-bottom: $section-margin;
+    @media (min-width: $screen-sm) {
+      margin-bottom: $section-margin;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: $section-margin-small;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $section-margin-xsmall;
+    }
   }
 
-  .header {
-    h4 {
-      color: $terde-white;
+  .header h2 {
+    @media (max-width: $screen-xs-max) {
+      font-size: ceil($font-size-base * 1.25);
+      margin-top: ($line-height-computed / 2);
+      margin-bottom: ($line-height-computed / 2);
     }
+
   }
 
   .row > div > .content {
@@ -28,13 +53,20 @@ body {
     }
 
     @media (max-width: $screen-sm-max) {
-      margin-top: $padding-large-vertical;
+      margin-top: ($line-height-computed);
     }
 
     &.map {
+      @media (max-width: $screen-sm-max) {
+        margin-top: ($line-height-computed / 2);
+      }
       position: relative;
       width: 100%;
-      padding-bottom: 100%;
+      padding-bottom: 84%;
+      @media (max-width: $screen-xs-max) {
+        padding-bottom: 56.25%;
+      }
+
 
       #map {
         // @TODO not working in Chrome: https://github.com/Leaflet/Leaflet/issues/1549
@@ -67,7 +99,6 @@ body {
   .footer {
     p {
       float: right;
-      color: $terde-white;
       text-transform: uppercase;
     }
   }
