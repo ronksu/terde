@@ -5,8 +5,22 @@ define ['lodash'], (_) ->
     layer.clearLayers();
 
     _.each points, (point) ->
-      # @TODO add icon, more data, etc
+      # TODO extract functionality, dont make dupes out of icons
+      icon = L.icon
+        iconUrl: switch point.shine
+          when 3 then 'images/sunsymbol.svg'
+          when 2 then 'images/sunsymbol.svg'
+          when 1 then 'images/partialshadesymbol.svg'
+          else 'images/shadesymbol.svg'
+        iconSize: [45, 64]
+        iconAnchor: [21, 51]
+        popupAnchor: [10, -32] #-24, 62
       layer.addLayer(L.marker(point.coordinates))
+      layer
+        .addLayer L
+          .marker(point.coordinates, {icon})
+          .bindPopup("<b>#{point.name}</b><br>#{point.description}")
+      #@TODO change description to address, templatize.
 
   initDataLayer = (map, mapData) ->
     dataLayer = L
@@ -41,7 +55,7 @@ define ['lodash'], (_) ->
           position.setLatLng(e.latlng)
 
         # @TODO set zooming to show e.g. 10 nearest?
-        map.setView(e.latlng, 18)
+        map.setView(e.latlng, 16)
       .on 'locationerror', (err) ->
         # @TODO initial helsinki is fine?
 
