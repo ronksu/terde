@@ -9,7 +9,7 @@
             },
             "properties": {
                 "nimi": "terde1",
-                "description": "description of terde1",
+                "pisteen_os": "Address terde1",
                 "shine": {
                     "0": "3",
                     "1": "3",
@@ -46,7 +46,7 @@
             },
             "properties": {
                 "nimi": "terde2",
-                "description": "description of terde2",
+                "pisteen_os": "Address terde2",
                 "shine": {
                     "0": "2",
                     "1": "2",
@@ -83,7 +83,7 @@
             },
             "properties": {
                 "nimi": "terde3",
-                "description": "description of terde3",
+                "pisteen_os": "Address terde3",
                 "shine": {
                     "0": "1",
                     "1": "1",
@@ -120,7 +120,7 @@
             },
             "properties": {
                 "nimi": "terde4",
-                "description": "description of terde4",
+                "pisteen_os": "Address terde4",
                 "shine": {
                     "0": "0",
                     "1": "0",

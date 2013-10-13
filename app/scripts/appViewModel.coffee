@@ -17,7 +17,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
           item = observable()
 
           name: item.properties.nimi
-          description: item.properties.description
+          address: item.properties.pisteen_os
           shine: parseInt(item.properties.shine[@clock()] ? 0)
           coordinates: item.geometry.coordinates
 

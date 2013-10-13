@@ -37,7 +37,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.mapData.subscribe (data) ->
           flatData = _.flatten(data)
           _.each flatData, (POI) ->
-            expect(POI).to.have.keys(['coordinates', 'description', 'name', 'shine'])
+            expect(POI).to.have.keys(['coordinates', 'address', 'name', 'shine'])
           done()
         appViewModel.init()
 
@@ -46,7 +46,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.mapData.subscribe (data) ->
           terde1 = _.first(_.flatten(data))
           expect(terde1.name).to.be.a('string').and.to.equal('terde1')
-          expect(terde1.description).to.be.a('string').and.to.equal('description of terde1')
+          expect(terde1.address).to.be.a('string').and.to.equal('Address of terde1')
           expect(terde1.shine).to.be.a('number').and.to.equal(2)
           expect(terde1.coordinates).to.be.an('array').and.to.equalAsSets([102, 0.5])
           done()
