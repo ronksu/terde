@@ -19,7 +19,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
           name: item.properties.nimi
           address: item.properties.pisteen_os
           shine: parseInt(item.properties.shine[@clock()] ? 0)
-          coordinates: item.geometry.coordinates
+          coordinates: item.geometry.coordinates.reverse()
 
       @terdeDataMapping =
         key: (item) ->

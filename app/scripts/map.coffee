@@ -19,7 +19,7 @@ define ['lodash'], (_) ->
       layer
         .addLayer L
           .marker(point.coordinates, {icon})
-          .bindPopup("<b>#{point.name}</b><br>#{point.description}")
+          .bindPopup("<b>#{point.name}</b><br>#{point.address}")
       #@TODO change description to address, templatize.
 
   initDataLayer = (map, mapData) ->
