@@ -8,6 +8,13 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
 
       setInterval(clockTick, 1000*60)
 
+    getShiningLevels = ({levels, currentHour}) ->
+      getShineLevel = (accu, hourAdd) ->
+        accu.push(parseInt(levels[(currentHour + hourAdd) % 23] ? 0))
+        accu
+
+      _.reduce [0..5], getShineLevel, []
+
     constructor: () ->
       @locationData = ko.observable()
       @clock = ko.observable((new Date()).getHours())
@@ -18,7 +25,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
 
           name: item.properties.nimi
           address: item.properties.pisteen_os
-          shine: parseInt(item.properties.shine[@clock()] ? 0)
+          shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
           coordinates: item.geometry.coordinates.reverse()
 
       @terdeDataMapping =
@@ -37,7 +44,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
         uri = new Uri(window.location)
         hashClock = parseInt uri.setQuery(uri.anchor()).getQueryParamValues('clock')
 
-        if _.isNumber hashClock
+        if _.isFinite hashClock
           @clock(hashClock)
         else
           initClock(@clock)

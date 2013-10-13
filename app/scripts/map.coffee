@@ -7,7 +7,7 @@ define ['lodash'], (_) ->
     _.each points, (point) ->
       # TODO extract functionality, dont make dupes out of icons
       icon = L.icon
-        iconUrl: switch point.shine
+        iconUrl: switch _.first(point.shine)
           when 3 then 'images/sunsymbol.svg'
           when 2 then 'images/sunsymbol.svg'
           when 1 then 'images/partialshadesymbol.svg'
