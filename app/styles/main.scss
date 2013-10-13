@@ -46,6 +46,10 @@ body {
   .row > div > .content {
     border-radius: $border-radius-container;
 
+    &.terraces .result {
+      border: 1px solid black;
+    }
+
     // @TODO remove placeholder
     &.placeholder {
       border: 1px solid black;
