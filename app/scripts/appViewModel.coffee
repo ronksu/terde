@@ -1,4 +1,4 @@
-define ['jquery', 'knockout', 'lodash'], ($, ko, _) ->
+define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
   class terdeViewModel
 
     # @TODO move somewhere else...
@@ -33,7 +33,14 @@ define ['jquery', 'knockout', 'lodash'], ($, ko, _) ->
       if _.isFunction(clockFn)
         clockFn(@clock)
       else
-        initClock(@clock)
+        # @TODO extract elsewhere...
+        uri = new Uri(window.location)
+        hashClock = parseInt uri.setQuery(uri.anchor()).getQueryParamValues('clock')
+
+        if _.isNumber hashClock
+          @clock(hashClock)
+        else
+          initClock(@clock)
 
       mapDataRequest = $.ajax
         url: '/data/terassit_0101.json'

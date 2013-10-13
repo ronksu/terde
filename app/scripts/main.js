@@ -13,7 +13,8 @@ require.config({
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         knockout: '../bower_components/knockout/knockout',
         knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping',
-        lodash: '../bower_components/lodash/dist/lodash.min'
+        lodash: '../bower_components/lodash/dist/lodash.min',
+        Uri: '../bower_components/jsUri/Uri.min'
     },
     shim: {
         bootstrapAffix: {
@@ -45,6 +46,9 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
+        },
+        Uri: {
+            exports: 'Uri'
         }
     },
     deps: ['knockout', 'knockoutMapping'],
