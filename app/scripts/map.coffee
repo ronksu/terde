@@ -51,11 +51,10 @@ define ['lodash'], (_) ->
             fillOpacity: 0.6
           })
           .addTo(map)
+        # @TODO set zooming to show e.g. 10 nearest?
+          map.setView(e.latlng, 16)
         else
           position.setLatLng(e.latlng)
-
-        # @TODO set zooming to show e.g. 10 nearest?
-        map.setView(e.latlng, 16)
       .on 'locationerror', (err) ->
         # @TODO initial helsinki is fine?
 
