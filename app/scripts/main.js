@@ -11,7 +11,7 @@ require.config({
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
-        knockout: '../bower_components/knockout/knockout',
+        knockout: '../bower_components/knockout.js/knockout',
         knockoutMapping: '../bower_components/knockout-mapping/knockout.mapping',
         lodash: '../bower_components/lodash/dist/lodash.min',
         Uri: '../bower_components/jsUri/Uri.min'
