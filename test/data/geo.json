@@ -80,6 +80,66 @@
                     "18": "0"
                 }
             }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.0, 20.5]
+            },
+            "properties": {
+                "nimi": "terde5",
+                "pisteen_os": "Address of terde5",
+                "shine": {
+                    "12": "0",
+                    "13": "0",
+                    "14": "0",
+                    "15": "0",
+                    "16": "0",
+                    "17": "0",
+                    "18": "0"
+                }
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.0, 20.5]
+            },
+            "properties": {
+                "nimi": "terde6",
+                "pisteen_os": "Address of terde6",
+                "shine": {
+                    "12": "0",
+                    "13": "0",
+                    "14": "0",
+                    "15": "0",
+                    "16": "0",
+                    "17": "0",
+                    "18": "0"
+                }
+            }
+        },
+        {
+            "type": "feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [10.0, 20.5]
+            },
+            "properties": {
+                "nimi": "terde7",
+                "pisteen_os": "Address of terde7",
+                "shine": {
+                    "12": "0",
+                    "13": "0",
+                    "14": "0",
+                    "15": "0",
+                    "16": "0",
+                    "17": "0",
+                    "18": "0"
+                }
+            }
         }
     ]
 }
