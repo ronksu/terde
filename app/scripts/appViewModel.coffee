@@ -32,6 +32,10 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
         # @TODO compute somehow nearest ones.
         _.first(@mapData(), 5)
 
+      @keywords = ko.computed =>
+        _.map @mapData(), (point) ->
+          "#{point.name}, #{point.address}"
+
       @terdeDataMapping =
         key: (item) ->
           item

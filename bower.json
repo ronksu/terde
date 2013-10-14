@@ -9,7 +9,8 @@
     "knockout.js": "~2.3.0",
     "knockout-mapping": "~2.4.1",
     "lodash": "~2.1.0",
-    "jsUri": "~1.2.2"
+    "jsUri": "~1.2.2",
+    "knockout.autocomplete": "git@github.com:sunesimonsen/knockout.autocomplete.git#~0.0.2"
   },
   "devDependencies": {
     "jquery-mockjax": "~1.5.2"

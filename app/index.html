@@ -13,6 +13,8 @@
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+        <link href='bower_components/knockout.autocomplete/lib/knockout.autocomplete.css' rel='stylesheet' />
+
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
@@ -42,19 +44,22 @@
                     <div class="col-md-3 col-sm-4 col-md-push-2">
                         <div class="content placeholder terraces">
                             <div class="container">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <h5>Hae baaria:</h5>
-                                </div>
-                                <div class="col-sm-12">
-                                    <input list="terraces"/>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h5>Hae baaria:</h5>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input list="terraces"/>
 
-                                    <datalist id="terraces">
-                                        <option value="Mardin Pub, Mäkelänkatu 15, Helsinki"></option>
-                                        <option value="Porvoonkadun Baari, Porvoonkatu 21, Helsinki"></option>
-                                        <option value="Pub Porthan, Porthaninkatu 10, Helsinki"></option>
-                                    </datalist>
+                                        <datalist id="terraces">
+                                            <option value="Mardin Pub, Mäkelänkatu 15, Helsinki"></option>
+                                            <option value="Porvoonkadun Baari, Porvoonkatu 21, Helsinki"></option>
+                                            <option value="Pub Porthan, Porthaninkatu 10, Helsinki"></option>
+                                        </datalist>
+                                    </div>
                                 </div>
+                            <div class="row">
+                                <input data-bind="autocomplete: { data: keywords, maxItems: 6 }" value=""/>
                             </div>
                             </div>
 
