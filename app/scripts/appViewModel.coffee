@@ -30,10 +30,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
 
       @nearestPoints = ko.computed =>
         # @TODO compute somehow nearest ones.
-        val = _.first(@mapData(), 5)
-        console.log val
-        val
-
+        _.first(@mapData(), 5)
 
       @terdeDataMapping =
         key: (item) ->
