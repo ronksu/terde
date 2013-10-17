@@ -47,18 +47,12 @@
                                     <h5>Hae baaria:</h5>
                                 </div>
                                 <div class="col-sm-12">
-                                    <input list="terraces"/>
-
-                                    <datalist id="terraces">
-                                        <option value="Mardin Pub, Mäkelänkatu 15, Helsinki"></option>
-                                        <option value="Porvoonkadun Baari, Porvoonkatu 21, Helsinki"></option>
-                                        <option value="Pub Porthan, Porthaninkatu 10, Helsinki"></option>
-                                    </datalist>
+                                    <input data-bind="value: searchCriteria"/>
                                 </div>
                             </div>
                             </div>
 
-                            <div class="row" data-bind="foreach: nearestPoints">
+                            <div class="row" data-bind="foreach: searchResults">
                                 <div class="col-sm-12 col-xs-6">
                                     <div class="result">
                                         <div class="container">
