@@ -28,6 +28,10 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
           shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
           coordinates: item.geometry.coordinates.reverse()
 
+      @nearestPoints = ko.computed =>
+        # @TODO compute somehow nearest ones.
+        _.first(@mapData(), 5)
+
       @terdeDataMapping =
         key: (item) ->
           item

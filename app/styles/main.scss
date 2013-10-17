@@ -48,6 +48,22 @@ body {
 
     &.terraces .result {
       border: 1px dashed black;
+
+      .shine-level {
+        height: 10px;
+        &.shine-level-0 {
+          background-color: #000000;
+        }
+        &.shine-level-1 {
+          background-color: gray;
+        }
+        &.shine-level-2 {
+          background-color: orange;
+        }
+        &.shine-level-3 {
+          background-color: #ffff00;
+        }
+      }
     }
 
     // @TODO remove placeholder

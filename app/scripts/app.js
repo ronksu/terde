@@ -1,12 +1,14 @@
 /*global define */
-define(['map', "AppViewModel"], function (map, AppViewModel) {
+define(['map', 'knockout',"AppViewModel"], function (map, ko ,AppViewModel) {
 
     var init = function() {
         // @TODO useless class constructions, refactor away
         aVM = new AppViewModel()
         aVM.init()
 
-        map.init(aVM.mapData);
+        ko.applyBindings(aVM)
+
+        map.init(aVM.mapData)
     };
 
     return {init: init};

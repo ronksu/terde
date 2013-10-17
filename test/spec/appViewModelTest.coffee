@@ -25,7 +25,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.locationData.subscribe (data) ->
           flatData = _.flatten(data)
-          expect(flatData).to.be.a('Array').and.to.have.length(4)
+          expect(flatData).to.be.a('Array').and.to.have.length(7)
           _.each flatData, (POI) ->
             expect(POI()).to.have.keys(['geometry', 'properties', 'type'])
 
@@ -112,4 +112,14 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
 
         appViewModel.init
           clockFn: (clock) -> clock(13)
+
+    describe "Gets nearest points", ->
+      it "Loads nearest points on load", (done) ->
+        appViewModel = new AppViewModel()
+        appViewModel.nearestPoints.subscribe (data) ->
+          expect(data).to.be.a('array').and.to.have.length(5)
+          done()
+
+        appViewModel.init
+          clockFn: (clock) -> clock(12)
 
