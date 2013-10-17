@@ -1,4 +1,4 @@
-define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
+define ['jquery', 'knockout', 'lodash', 'Uri', 'getNearestPoints'], ($, ko, _, Uri, getNearestPoints) ->
   class terdeViewModel
 
     # @TODO move somewhere else...
@@ -16,8 +16,8 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
       _.reduce [0..5], getShineLevel, []
 
     constructor: () ->
-      @locationData = ko.observable()
       @clock = ko.observable((new Date()).getHours())
+      @locationData = ko.observable()
       @mapData = ko.computed =>
         extractedLocationData = _.flatten(@locationData())
         _.map extractedLocationData, (observable) =>
@@ -28,9 +28,12 @@ define ['jquery', 'knockout', 'lodash', 'Uri'], ($, ko, _, Uri) ->
           shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
           coordinates: item.geometry.coordinates.reverse()
 
+      @userLocation = ko.observable()
       @nearestPoints = ko.computed =>
-        # @TODO compute somehow nearest ones.
-        _.first(@mapData(), 5)
+        if (@userLocation() instanceof L.LatLng) and @mapData().length > 0
+          getNearestPoints @userLocation(), @mapData()
+        else
+          []
 
       @terdeDataMapping =
         key: (item) ->
