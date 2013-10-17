@@ -34,6 +34,21 @@ body {
     }
   }
 
+  .search-title-container {
+      border-radius: 10px 10px 0px 0px;
+      background-color: white;
+      padding: 15px;
+
+
+  }
+
+  .search-container {
+      border-radius: 0px 0px 10px 10px;
+      background-color: #ffe761;
+      padding: 15px;
+
+  }
+
   .header h2 {
     @media (max-width: $screen-xs-max) {
       font-size: ceil($font-size-base * 1.25);
