@@ -8,7 +8,7 @@ define(['map', 'knockout',"AppViewModel"], function (map, ko ,AppViewModel) {
 
         ko.applyBindings(aVM)
 
-        map.init(aVM.mapData)
+        map.init(aVM.mapData, aVM.userLocation)
     };
 
     return {init: init};

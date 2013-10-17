@@ -20,7 +20,7 @@ define ['lodash'], (_) ->
         .addLayer L
           .marker(point.coordinates, {icon})
           .bindPopup("<b>#{point.name}</b><br>#{point.address}")
-      #@TODO change description to address, templatize.
+      #@TODO templatize.
 
   initDataLayer = (map, mapData) ->
     dataLayer = L
@@ -32,7 +32,7 @@ define ['lodash'], (_) ->
     mapData.subscribe (points) ->
       updateDataPoints(dataLayer, points)
 
-  init = (mapData) ->
+  init = (mapData, userLocation) ->
     position = undefined
     map = L
       .mapbox
@@ -53,6 +53,7 @@ define ['lodash'], (_) ->
           .addTo(map)
         # @TODO set zooming to show e.g. 10 nearest?
           map.setView(e.latlng, 16)
+          userLocation(e.latlng)
         else
           position.setLatLng(e.latlng)
       .on 'locationerror', (err) ->
