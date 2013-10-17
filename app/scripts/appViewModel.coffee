@@ -1,4 +1,4 @@
-define ['jquery', 'knockout', 'lodash', 'Uri', 'getNearestPoints'], ($, ko, _, Uri, getNearestPoints) ->
+define ['jquery', 'knockout', 'lodash', 'Uri', './getNearestPoints'], ($, ko, _, Uri, getNearestPoints) ->
   class terdeViewModel
 
     # @TODO move somewhere else...
