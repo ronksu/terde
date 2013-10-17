@@ -34,6 +34,21 @@ body {
     }
   }
 
+  .search-title-container {
+      border-radius: 10px 10px 0px 0px;
+      background-color: white;
+      padding: 15px;
+
+
+  }
+
+  .search-container {
+      border-radius: 0px 0px 10px 10px;
+      background-color: #ffcc00;
+      padding: 15px;
+
+  }
+
   .header h2 {
     @media (max-width: $screen-xs-max) {
       font-size: ceil($font-size-base * 1.25);
@@ -43,11 +58,11 @@ body {
 
   }
 
-  .row div .content {
+  .row > div > .content {
     border-radius: $border-radius-container;
 
     &.terraces .result {
-      border: 1px solid black;
+      border: 1px dashed black;
 
       .shine-level {
         height: 10px;
