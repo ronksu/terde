@@ -58,11 +58,22 @@ body {
 
   }
 
-  .row > div > .content {
+  .row div .content {
     border-radius: $border-radius-container;
 
     &.terraces .result {
       border: 1px dashed black;
+
+      .shine-levels {
+        margin: 0 -1%;
+
+        .col-xs-2.no-space {
+          padding-left: 0;
+          padding-right: 0;
+          width: 14.66667%;
+          margin: 0 1%;
+        }
+      }
 
       .shine-level {
         height: 10px;
