@@ -1,14 +1,9 @@
 /*global define */
-define(['map', 'knockout',"AppViewModel"], function (map, ko ,AppViewModel) {
+define(['map', 'knockout',"appViewModelFactory"], function (map, ko, appViewModel) {
 
     var init = function() {
-        // @TODO useless class constructions, refactor away
-        aVM = new AppViewModel()
-        aVM.init()
-
-        ko.applyBindings(aVM)
-
-        map.init({mapData: aVM.mapData, userLocation: aVM.userLocation, selectedTerraceCoordinates: aVM.selectedTerraceCoordinates})
+        ko.applyBindings(appViewModel)
+        map.init({mapData: appViewModel.mapData, userLocation: appViewModel.userLocation, selectedTerraceCoordinates: appViewModel.selectedTerraceCoordinates})
     };
 
     return {init: init};

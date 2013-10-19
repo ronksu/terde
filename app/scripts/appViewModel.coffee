@@ -73,3 +73,5 @@ define [
 
       mapDataRequest.fail (jqXHR, textStatus, errorThrown) ->
         # @TODO fail nicely
+
+      @
