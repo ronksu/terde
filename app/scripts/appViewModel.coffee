@@ -51,6 +51,11 @@ define ['jquery', 'knockout', 'lodash', 'Uri', './getNearestPoints'], ($, ko, _,
           _.map data.data.features, (feature) ->
             ko.observable feature
 
+      @selectedTerraceCoordinates = ko.observable()
+
+      @focusOnClick = (terrace) =>
+        @selectedTerraceCoordinates(terrace.coordinates)
+
     init: ({clockFn} = {}) ->
       # @TODO separate to own component
       if _.isFunction(clockFn)

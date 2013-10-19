@@ -32,7 +32,12 @@ define ['lodash'], (_) ->
     mapData.subscribe (points) ->
       updateDataPoints(dataLayer, points)
 
-  init = (mapData, userLocation) ->
+  initShowSelectedTerrace = (map, selectedTerraceCoordinates) ->
+    selectedTerraceCoordinates.subscribe (coordinates) ->
+      if _.isArray coordinates
+        map.setView(coordinates, 16)
+
+  init = ({mapData, userLocation, selectedTerraceCoordinates}) ->
     position = undefined
     map = L
       .mapbox
@@ -40,7 +45,6 @@ define ['lodash'], (_) ->
       .setView([60.1708, 24.9375], 12)
       .locate({setView: false, watch: true})
       .on 'locationfound', (e) ->
-        # radius = e.accuracy / 4?
         if _.isUndefined position
           position = L.circleMarker(e.latlng, {
             radius: 5,
@@ -51,14 +55,12 @@ define ['lodash'], (_) ->
             fillOpacity: 0.6
           })
           .addTo(map)
-        # @TODO set zooming to show e.g. 10 nearest?
-          map.setView(e.latlng, 16)
+          map.setView(e.latlng, 15)
           userLocation(e.latlng)
         else
           position.setLatLng(e.latlng)
-      .on 'locationerror', (err) ->
-        # @TODO initial helsinki is fine?
 
     initDataLayer(map, mapData)
+    initShowSelectedTerrace(map, selectedTerraceCoordinates)
 
   {init}

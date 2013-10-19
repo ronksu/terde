@@ -64,6 +64,10 @@ body {
     &.terraces .result {
       border: 1px dashed black;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       .shine-levels {
         margin: 0 -1%;
 
