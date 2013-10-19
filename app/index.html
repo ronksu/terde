@@ -9,8 +9,6 @@
         <title>POROTTAA - terassiapplikaatio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
         <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
         <!-- build:css(.tmp) styles/main.css -->
@@ -100,12 +98,10 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- @TODO how to get this bundled on build??? -->
-        <script src="http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js"></script>
         <script src="bower_components/leaflet-knn/leaflet-knn.min.js"></script>
+        <!-- endbower -->
+        <script src="scripts/vendor/mapbox.1.3.1.js"></script>
+        <!-- endbuild -->
 
         <script>
             (function (i, s, o, g, r, a, m) {
