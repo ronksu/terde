@@ -1,12 +1,17 @@
-define ['jquery', 'knockout', 'lodash', 'Uri', './getNearestPoints'], ($, ko, _, Uri, getNearestPoints) ->
+define [
+  'jquery'
+  'knockout'
+  'lodash'
+  './clockTick'
+  './getNearestPoints'
+],(
+    $
+    ko
+    _
+    clockTick
+    getNearestPoints
+) ->
   class terdeViewModel
-
-    # @TODO move somewhere else...
-    initClock = (clock) ->
-      clockTick = () ->
-        clock((new Date()).getHours())
-
-      setInterval(clockTick, 1000*60)
 
     getShiningLevels = ({levels, currentHour}) ->
       getShineLevel = (accu, hourAdd) ->
@@ -57,18 +62,7 @@ define ['jquery', 'knockout', 'lodash', 'Uri', './getNearestPoints'], ($, ko, _,
         @selectedTerraceCoordinates(terrace.coordinates)
 
     init: ({clockFn} = {}) ->
-      # @TODO separate to own component
-      if _.isFunction(clockFn)
-        clockFn(@clock)
-      else
-        # @TODO extract elsewhere...
-        uri = new Uri(window.location)
-        hashClock = parseInt uri.setQuery(uri.anchor()).getQueryParamValues('clock')
-
-        if _.isFinite hashClock
-          @clock(hashClock)
-        else
-          initClock(@clock)
+      clockTick({clock: @clock, clockFn})
 
       mapDataRequest = $.ajax
         url: '/data/terassit_0101.json'
