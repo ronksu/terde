@@ -33,7 +33,7 @@ define [
           name: item.properties.nimi
           address: item.properties.pisteen_os
           shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
-          coordinates: item.geometry.coordinates.reverse()
+          coordinates: item.geometry.coordinates
 
       @userLocation = ko.observable()
       @nearestPoints = ko.computed =>
@@ -56,6 +56,8 @@ define [
           item
         create: (data) ->
           _.map data.data.features, (feature) ->
+            # @TODO fix here wrong coordinate order in data for now..
+            feature.geometry.coordinates.reverse()
             ko.observable feature
 
       @selectedTerraceCoordinates = ko.observable()
