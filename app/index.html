@@ -72,13 +72,13 @@
                     <div class="col-md-2 col-md-pull-10">
                         <div class="content weather">
                             <div class="container">
-                                <div class="row">
+                                <div class="row" data-bind="with: weather">
                                     <div class="col-md-5 col-xs-5 col-sm-5">
                                         <div class="icon"><span class="glyphicon glyphicon-cloud"></span></div>
                                     </div>
                                     <div class="col-md-7 col-xs-7 col-sm-7">
                                         <span class="city">Helsinki</span>
-                                        <span class="temperature">+18 C</span>
+                                        <span class="temperature" data-bind="text: temperatureFormatted"></span>
                                     </div>
                                 </div>
                             </div>

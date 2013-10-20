@@ -3,12 +3,14 @@ define [
   'knockout'
   'lodash'
   './clockTick'
+  './openWeatherHelsinki'
   './getNearestPoints'
 ],(
     $
     ko
     _
     clockTick
+    openWeatherHelsinki
     getNearestPoints
 ) ->
   class terdeViewModel
@@ -61,8 +63,12 @@ define [
       @focusOnClick = (terrace) =>
         @selectedTerraceCoordinates(terrace.coordinates)
 
+      @weather = new openWeatherHelsinki()
+
     init: ({clockFn} = {}) ->
       clockTick({clock: @clock, clockFn})
+
+      @weather.init()
 
       mapDataRequest = $.ajax
         url: '/data/terassit_0101.json'
