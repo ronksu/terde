@@ -23,7 +23,7 @@ define [
           when @cloudinessInPercent() < 30
             'clear'
           when @cloudinessInPercent() < 70
-            'partlycloudy'
+            'partlyCloudy'
           else
             'cloudy'
 
