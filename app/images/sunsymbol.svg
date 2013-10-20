@@ -7,29 +7,27 @@ viewBox="0 0 59400 84100"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#FECC00;stroke-width:500}
+    .str0 {stroke:#2B2A29;stroke-width:1000}
     .fil1 {fill:#FEFEFE}
     .fil0 {fill:url(#id0)}
     .fil2 {fill:url(#id1)}
    ]]>
   </style>
-  <radialGradient id="id0" gradientUnits="userSpaceOnUse" cx="27638.7" cy="33768.9" r="27744.8" fx="27638.7" fy="33768.9">
+  <radialGradient id="id0" gradientUnits="userSpaceOnUse" cx="29632.5" cy="33978.3" r="27744.8" fx="29632.5" fy="33978.3">
    <stop offset="0" style="stop-color:#FEFEFE"/>
-   <stop offset="0.321569" style="stop-color:#FFF57F"/>
-   <stop offset="1" style="stop-color:#FFED00"/>
+   <stop offset="0.321569" style="stop-color:#FFF17F"/>
+   <stop offset="1" style="stop-color:#FFE500"/>
   </radialGradient>
-  <radialGradient id="id1" gradientUnits="userSpaceOnUse" cx="28466.6" cy="33412.8" r="8995.84" fx="28466.6" fy="33412.8">
+  <radialGradient id="id1" gradientUnits="userSpaceOnUse" cx="30450.4" cy="33622.1" r="8995.84" fx="30450.4" fy="33622.1">
    <stop offset="0" style="stop-color:#FEFEFE"/>
-   <stop offset="0.670588" style="stop-color:#FFF67F"/>
-   <stop offset="1" style="stop-color:#FFEE00"/>
+   <stop offset="0.670588" style="stop-color:#FFEF7F"/>
+   <stop offset="1" style="stop-color:#FFE100"/>
   </radialGradient>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_277613080">
-   <polygon class="fil0 str0" points="28536,11018 23973,23069 14078,19365 18205,28572 6104,33551 18046,38097 13654,47252 23708,43865 28589,66508 33128,44024 43129,47358 39054,37886 50968,33551 38948,28837 43076,19629 33075,22963 "/>
-   <circle class="fil1" cx="28506" cy="33391" r="9895"/>
-   <circle class="fil2" cx="28467" cy="33413" r="8865"/>
-  </g>
+  <polygon class="fil0 str0" points="30530,11227 25967,23278 16071,19574 20199,28782 8097,33760 20040,38307 15648,47461 25702,44075 30583,66717 35121,44233 45123,47567 41048,38095 52962,33760 40942,29046 45070,19839 35068,23173 "/>
+  <circle class="fil1" cx="30500" cy="33600" r="9895"/>
+  <circle class="fil2" cx="30450" cy="33622" r="8865"/>
  </g>
 </svg>
