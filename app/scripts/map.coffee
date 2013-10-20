@@ -15,7 +15,6 @@ define ['lodash'], (_) ->
         iconSize: [45, 64]
         iconAnchor: [21, 51]
         popupAnchor: [10, -32] #-24, 62
-      layer.addLayer(L.marker(point.coordinates))
       layer
         .addLayer L
           .marker(point.coordinates, {icon})
