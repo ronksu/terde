@@ -15,7 +15,10 @@ define [
     constructor: () ->
       @temperature = ko.observable()
       @temperatureFormatted = ko.computed =>
-        "#{Math.round(kelvin2Celcius(@temperature()))} °C"
+        if _.isFinite(@temperature())
+          "#{Math.round(kelvin2Celcius(@temperature()))} °C"
+        else
+          ""
 
       @cloudinessInPercent = ko.observable()
       @logicalCloudiness = ko.computed =>
