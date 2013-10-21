@@ -3,7 +3,7 @@ define(['map', 'knockout',"appViewModelFactory", "weatherSymbols"], function (ma
 
     var init = function() {
         ko.applyBindings(appViewModel)
-        map.init({mapData: appViewModel.mapData, userLocation: appViewModel.userLocation, selectedTerraceCoordinates: appViewModel.selectedTerraceCoordinates})
+        map.init({mapData: appViewModel.mapData, userLocation: appViewModel.userLocation, selectedTerrace: appViewModel.selectedTerrace})
         weatherSymbols.init({logicalCloudiness: appViewModel.weather.logicalCloudiness})
     };
 

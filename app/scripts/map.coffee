@@ -1,4 +1,4 @@
-define ['lodash'], (_) ->
+define ['lodash', './terraceMarker'], (_, terraceMarker) ->
 
   updateDataPoints = (layer, points) ->
     # @TODO optimize to update only changed layers
@@ -14,10 +14,9 @@ define ['lodash'], (_) ->
           else 'images/shadesymbol.svg'
         iconSize: [45, 64]
         iconAnchor: [21, 51]
-        popupAnchor: [10, -32] #-24, 62
+        popupAnchor: [10, -32]
       layer
-        .addLayer L
-          .marker(point.coordinates, {icon})
+        .addLayer terraceMarker(point.coordinates, {icon, id: point.id})
           .bindPopup("<b>#{point.name}</b><br>#{point.address}")
       #@TODO templatize.
 
@@ -31,12 +30,22 @@ define ['lodash'], (_) ->
     mapData.subscribe (points) ->
       updateDataPoints(dataLayer, points)
 
-  initShowSelectedTerrace = (map, selectedTerraceCoordinates) ->
-    selectedTerraceCoordinates.subscribe (coordinates) ->
-      if _.isArray coordinates
-        map.setView(coordinates, 16)
+    dataLayer
 
-  init = ({mapData, userLocation, selectedTerraceCoordinates}) ->
+  initShowSelectedTerrace = (map, dataLayer, selectedTerrace) ->
+    selectedTerrace.subscribe (terrace) ->
+      terraceMarker =
+        _.find(
+          dataLayer.getLayers(),
+          (marker) ->
+            marker.options.id is terrace.id
+        )
+
+      if terraceMarker
+        terraceMarker.openPopup()
+        map.setView(terraceMarker.getLatLng(), 16)
+
+  init = ({mapData, userLocation, selectedTerrace}) ->
     position = undefined
     map = L
       .mapbox
@@ -59,7 +68,7 @@ define ['lodash'], (_) ->
         else
           position.setLatLng(e.latlng)
 
-    initDataLayer(map, mapData)
-    initShowSelectedTerrace(map, selectedTerraceCoordinates)
+    dataLayer = initDataLayer(map, mapData)
+    initShowSelectedTerrace(map, dataLayer, selectedTerrace)
 
   {init}

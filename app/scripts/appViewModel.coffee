@@ -30,6 +30,7 @@ define [
         _.map extractedLocationData, (observable) =>
           item = observable()
 
+          id: item.id
           name: item.properties.nimi
           address: item.properties.pisteen_os
           shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
@@ -52,18 +53,17 @@ define [
           @nearestPoints()
 
       @terdeDataMapping =
-        key: (item) ->
-          item
         create: (data) ->
           _.map data.data.features, (feature) ->
             # @TODO fix here wrong coordinate order in data for now..
             feature.geometry.coordinates.reverse()
+            feature.id = _.uniqueId()
             ko.observable feature
 
-      @selectedTerraceCoordinates = ko.observable()
+      @selectedTerrace = ko.observable()
 
       @focusOnClick = (terrace) =>
-        @selectedTerraceCoordinates(terrace.coordinates)
+        @selectedTerrace(terrace)
 
       @weather = new openWeatherHelsinki()
 
