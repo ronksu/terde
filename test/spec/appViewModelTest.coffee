@@ -45,7 +45,8 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           terde1 = _.first(_.flatten(data))
-          expect(terde1.id).to.be.a('number').and.to.equal(1)
+          expect(terde1.id).to.be.a('string').and.to.equal('22')
+          expect(parseInt(terde1.id)).to.be.a('number').and.to.equal(22)
           expect(terde1.name).to.be.a('string').and.to.equal('terde1')
           expect(terde1.address).to.be.a('string').and.to.equal('Address of terde1')
           expect(terde1.shine).to.be.a('array').and.to.equalAsSets([2, 3, 1, 0, 0, 0])

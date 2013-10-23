@@ -3,17 +3,17 @@ define [
   'knockout'
   'lodash'
   './clockTick'
-  './openWeatherHelsinki'
+  './OpenWeatherHelsinki'
   './getNearestPoints'
 ],(
     $
     ko
     _
     clockTick
-    openWeatherHelsinki
+    OpenWeatherHelsinki
     getNearestPoints
 ) ->
-  class terdeViewModel
+  class TerdeViewModel
 
     getShiningLevels = ({levels, currentHour}) ->
       getShineLevel = (accu, hourAdd) ->
@@ -65,7 +65,7 @@ define [
       @focusOnClick = (terrace) =>
         @selectedTerrace(terrace)
 
-      @weather = new openWeatherHelsinki()
+      @weather = new OpenWeatherHelsinki()
 
     init: ({clockFn} = {}) ->
       clockTick({clock: @clock, clockFn})

@@ -11,7 +11,7 @@ define [
   kelvin2Celcius = (kelvins) ->
     kelvins - 273.15
 
-  class openWeatherHelsinki
+  class OpenWeatherHelsinki
     constructor: () ->
       @temperature = ko.observable()
       @temperatureFormatted = ko.computed =>

@@ -1,3 +1,3 @@
-define ['./appViewModel'],(AppViewModel) ->
+define ['./AppViewModel'],(AppViewModel) ->
   appViewModel = new AppViewModel()
   appViewModel.init()
