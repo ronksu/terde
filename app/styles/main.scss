@@ -36,26 +36,51 @@ body {
 
   .search-container {
     margin-bottom: 20px;
-  }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+      margin-bottom: 10px;
+
+    }
+    }
 
   .search-title-container, .result-title-container {
       border-radius: 10px 10px 0px 0px;
       padding: 5px 15px;
+      @media (max-width: $screen-md-max) and (min-width: $screen-sm) {
+        padding: 1px 15px;
+      }
+
   }
 
   .search-title-container {background-color: white;}
   .result-title-container {
     background-color: #43464B;
     color: $body-bg;
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+      h5 {
+        font-size: 13px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+    }
+
   }
 
   .search-field-container, .result-container-bottom {
       border-radius: 0px 0px 10px 10px;
       background-color: #43464B;
       padding: 5px 15px;
+      @media (max-width: $screen-md-max) and (min-width: $screen-sm) {
+        padding: 1px 15px;
+      }
+
       input {
         width: 100%;
         margin: 10px 0;
+        @media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+          margin: 5px 0;
+          font-size: 10px;
+        }
+
       }
   }
 
@@ -63,7 +88,11 @@ body {
   .result-container-bottom {
     background-color: white;
     height: 15px;
-  }
+    @media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+      height: 5px;
+    }
+
+    }
 
 
   .header h2 {
@@ -81,58 +110,122 @@ body {
     &.terraces {
       .results {
         background-color: white;
-        padding-top: 9px;
+        padding-top: 12px;
+        .result {
+          @include opacity(0.8);
+          .shine-levels {
+            @include opacity(0.6);
+          }
+
+          &:hover {
+            cursor: pointer;
+            @include opacity(1);
+            .shine-levels {
+              @include opacity(1);
+            }
+          }
+
+          span {
+            display: block;
+            &.name {
+              font-size: 16px;
+              line-height: 20px;
+            }
+
+            &.address {
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+
+          .shine-levels {
+            margin: 7px -1% 10px;
+
+            .col-xs-2.no-space {
+              padding-left: 0;
+              padding-right: 0;
+              width: 14.66667%;
+              margin: 0 1%;
+            }
+          }
+
+          .shine-level {
+            height: 18px;
+
+            &.shine-level-0 {
+              background-color: #000000;
+            }
+            &.shine-level-1 {
+              background-color: gray;
+            }
+            &.shine-level-2 {
+              background-color: orange;
+            }
+            &.shine-level-3 {
+              background-color: #ffff00;
+            }
+          }
+        }
+
       }
+
+      @media (max-width: $screen-md-max) and (min-width: $screen-md) {
+        .results {
+          padding-top: 12px;
+          .result {
+            span {
+              &.name {
+                font-size: 14px;
+                line-height: 16px;
+              }
+
+              &.address {
+                font-size: 12px;
+                line-height: 14px;
+              }
+            }
+
+            .shine-levels {
+              margin: 4px -1% 8px;
+            }
+
+            .shine-level {
+              height: 14px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: $screen-sm-max) and (min-width: $screen-sm) {
+        .results {
+          padding-top: 10px;
+          .result {
+            span {
+              &.name {
+                font-size: 14px;
+                line-height: 16px;
+              }
+
+              &.address {
+                font-size: 12px;
+                line-height: 14px;
+              }
+            }
+
+            .shine-levels {
+              margin: 2px -1% 8px;
+            }
+
+            .shine-level {
+              height: 14px;
+            }
+          }
+        }
+      }
+
     }
 
-    &.terraces .result {
-      &:hover {
-        // @TODO colors
-        cursor: pointer;
-      }
 
-      span {
-        &.name {
-          font-size: $font-size-base;
-          line-height: 16px;
-          display: block;
-        }
-
-        &.address {
-          font-size: $font-size-small;
-          line-height: $font-size-small;
-          display: block;
-        }
-      }
-
-      .shine-levels {
-        margin: 7px -1% 10px;
-
-        .col-xs-2.no-space {
-          padding-left: 0;
-          padding-right: 0;
-          width: 14.66667%;
-          margin: 0 1%;
-        }
-      }
-
-      .shine-level {
-        height: 16px;
-
-        &.shine-level-0 {
-          background-color: #000000;
-        }
-        &.shine-level-1 {
-          background-color: gray;
-        }
-        &.shine-level-2 {
-          background-color: orange;
-        }
-        &.shine-level-3 {
-          background-color: #ffff00;
-        }
-      }
-    }
 
     @media (max-width: $screen-sm-max) {
       margin-top: ($line-height-computed);
