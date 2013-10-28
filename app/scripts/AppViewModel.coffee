@@ -6,6 +6,7 @@ define [
   './terraceDataRequest'
   './OpenWeatherHelsinki'
   './getNearestPoints'
+  './TerraceSearch'
 ],(
     $
     ko
@@ -14,6 +15,7 @@ define [
     terraceDataRequest
     OpenWeatherHelsinki
     getNearestPoints
+    TerraceSearch
 ) ->
   class TerdeViewModel
 
@@ -47,14 +49,7 @@ define [
         else
           []
 
-      @searchCriteria = ko.observable()
-      @searchResults = ko.computed =>
-        if _.isString(@searchCriteria()) and @searchCriteria().length > 0
-          _.filter @mapData(), (point) =>
-            point.name?.toLowerCase().indexOf(@searchCriteria().toLowerCase()) >= 0 or
-            point.address?.toLowerCase().indexOf(@searchCriteria().toLowerCase()) >= 0
-        else
-          @nearestPoints()
+      @search = new TerraceSearch({@mapData, @nearestPoints})
 
       @terdeDataMapping =
         create: (data) ->

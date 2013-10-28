@@ -48,11 +48,11 @@
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="search-container">
-                                            <input data-bind="value: searchCriteria, valueUpdate:'keyup'"/>
+                                            <input data-bind="value: search.criteria, valueUpdate:'keyup'"/>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row" data-bind="foreach: searchResults">
+                                <div class="row" data-bind="foreach: search.results">
                                     <div class="col-sm-12 col-xs-6">
                                         <div class="result" data-bind="click: $parent.focusOnClick">
                                             <span class="name" data-bind="text: name"></span>
