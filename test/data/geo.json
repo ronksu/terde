@@ -129,7 +129,7 @@
             },
             "properties": {
                 "nimi": "terde7",
-                "pisteen_os": "Address of terde7",
+                "pisteen_os": null,
                 "shine": {
                     "12": "0",
                     "13": "0",

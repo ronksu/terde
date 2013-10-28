@@ -56,6 +56,17 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.init
           clockFn: (clock) -> clock(15)
 
+      it "validate single point without address", (done) ->
+        appViewModel = new AppViewModel()
+        appViewModel.mapData.subscribe (data) ->
+          terde1 = _.last(_.flatten(data))
+          expect(terde1.name).to.be.a('string').and.to.equal('terde7')
+          expect(terde1.address).to.be.a('string').and.to.equal('')
+          done()
+
+        appViewModel.init
+          clockFn: (clock) -> clock(15)
+
     describe "shine level is updated according to time", ->
       it "hours 12 level 0", (done) ->
         appViewModel = new AppViewModel()

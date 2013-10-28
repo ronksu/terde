@@ -33,7 +33,7 @@ define [
 
           id: item.id
           name: item.properties.nimi
-          address: item.properties.pisteen_os
+          address: item.properties.pisteen_os ? ""
           shine: getShiningLevels({levels:item.properties.shine, currentHour: @clock()})
           coordinates: item.geometry.coordinates
 
