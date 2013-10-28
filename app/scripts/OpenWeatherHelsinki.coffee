@@ -32,6 +32,8 @@ define [
 
     init: () ->
       # @TODO check cookie first
+
+      ###
       weatherDataRequest = $.ajax
         type: 'GET'
         url: 'http://api.openweathermap.org/data/2.5/weather?id=658225'
@@ -44,3 +46,4 @@ define [
 
         if _.isFinite(data?.main?.temp)
           @temperature(data.main.temp)
+      ###
