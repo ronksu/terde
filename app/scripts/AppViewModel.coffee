@@ -25,6 +25,7 @@ define [
     constructor: () ->
       @clock = ko.observable((new Date()).getHours())
       @locationData = ko.observable()
+
       @mapData = ko.computed =>
         extractedLocationData = _.flatten(@locationData())
         _.map extractedLocationData, (observable) =>
@@ -37,6 +38,7 @@ define [
           coordinates: item.geometry.coordinates
 
       @userLocation = ko.observable()
+
       @nearestPoints = ko.computed =>
         if (@userLocation() instanceof L.LatLng) and @mapData().length > 0
           getNearestPoints @userLocation(), @mapData()
@@ -78,8 +80,5 @@ define [
 
       mapDataRequest.done (data) =>
         ko.mapping.fromJS [data], @terdeDataMapping, @locationData
-
-      mapDataRequest.fail (jqXHR, textStatus, errorThrown) ->
-        # @TODO fail nicely
 
       @
