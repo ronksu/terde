@@ -3,6 +3,7 @@ define [
   'knockout'
   'lodash'
   './clockTick'
+  './terraceDataRequest'
   './OpenWeatherHelsinki'
   './getNearestPoints'
 ],(
@@ -10,6 +11,7 @@ define [
     ko
     _
     clockTick
+    terraceDataRequest
     OpenWeatherHelsinki
     getNearestPoints
 ) ->
@@ -74,10 +76,7 @@ define [
 
       @weather.init()
 
-      mapDataRequest = $.ajax
-        url: '/data/terassit_0101.json'
-        dataType: 'json'
-
+      mapDataRequest = terraceDataRequest.init()
       mapDataRequest.done (data) =>
         ko.mapping.fromJS [data], @terdeDataMapping, @locationData
 
