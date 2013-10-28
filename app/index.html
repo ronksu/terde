@@ -39,30 +39,45 @@
 
                     <div class="col-md-3 col-sm-4 col-md-push-2">
                         <div class="content terraces">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class ="search-title-container">
-                                            <h5>Hae baaria Kalliossa:</h5>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="search-container">
-                                            <input data-bind="value: search.criteria, valueUpdate:'keyup'"/>
-                                        </div>
+                            <div class="row search-container">
+                                <div class="col-sm-12">
+                                    <div class="search-title-container">
+                                        <h5>Hae baaria Kalliossa:</h5>
                                     </div>
                                 </div>
-                                <div class="row" data-bind="foreach: search.results">
-                                    <div class="col-sm-12 col-xs-6">
-                                        <div class="result" data-bind="click: $parent.focusOnClick">
-                                            <span class="name" data-bind="text: name"></span>
-                                            <span class="address" data-bind="text: address"></span>
-                                            <div class="row shine-levels"  data-bind="foreach: shine">
-                                                <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data}"></div>
+                                <div class="col-sm-12">
+                                    <div class="search-field-container">
+                                        <input data-bind="value: search.criteria, valueUpdate:'keyup'"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="result-title-container">
+                                        <h5>Lähimmät baarit:</h5>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12">
+                                    <div class="container results">
+                                        <div class="row" data-bind="foreach: search.results">
+                                            <div class="col-sm-12 col-xs-6">
+                                                <div class="result" data-bind="click: $parent.focusOnClick">
+                                                    <span class="name" data-bind="text: name"></span>
+                                                    <span class="address" data-bind="text: address"></span>
+                                                    <div class="row shine-levels"  data-bind="foreach: shine">
+                                                        <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data}"></div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-sm-12">
+                                    <div class="result-container-bottom"></div>
+                                </div>
+
                             </div>
                         </div>
                     </div>

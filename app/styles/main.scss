@@ -34,20 +34,37 @@ body {
     }
   }
 
-  .search-title-container {
-      border-radius: 10px 10px 0px 0px;
-      background-color: white;
-      padding: 5px 15px 5px;
-
-
+  .search-container {
+    margin-bottom: 20px;
   }
 
-  .search-container {
+  .search-title-container, .result-title-container {
+      border-radius: 10px 10px 0px 0px;
+      padding: 5px 15px;
+  }
+
+  .search-title-container {background-color: white;}
+  .result-title-container {
+    background-color: #43464B;
+    color: $body-bg;
+  }
+
+  .search-field-container, .result-container-bottom {
       border-radius: 0px 0px 10px 10px;
       background-color: #43464B;
-      padding: 15px;
-
+      padding: 5px 15px;
+      input {
+        width: 100%;
+        margin: 10px 0;
+      }
   }
+
+  .search-field-container {background-color: #43464B;}
+  .result-container-bottom {
+    background-color: white;
+    height: 15px;
+  }
+
 
   .header h2 {
     @media (max-width: $screen-xs-max) {
@@ -61,15 +78,35 @@ body {
   .row div .content {
     border-radius: $border-radius-container;
 
-    &.terraces .result {
-      border: 1px dashed black;
+    &.terraces {
+      .results {
+        background-color: white;
+        padding-top: 9px;
+      }
+    }
 
+    &.terraces .result {
       &:hover {
+        // @TODO colors
         cursor: pointer;
       }
 
+      span {
+        &.name {
+          font-size: $font-size-base;
+          line-height: 16px;
+          display: block;
+        }
+
+        &.address {
+          font-size: $font-size-small;
+          line-height: $font-size-small;
+          display: block;
+        }
+      }
+
       .shine-levels {
-        margin: 0 -1%;
+        margin: 7px -1% 10px;
 
         .col-xs-2.no-space {
           padding-left: 0;
@@ -80,7 +117,8 @@ body {
       }
 
       .shine-level {
-        height: 10px;
+        height: 16px;
+
         &.shine-level-0 {
           background-color: #000000;
         }
@@ -96,25 +134,17 @@ body {
       }
     }
 
-    // @TODO remove placeholder
-    &.placeholder {
-      border: 1px solid black;
-      min-height: 20px;
-    }
-
     @media (max-width: $screen-sm-max) {
       margin-top: ($line-height-computed);
     }
 
     &.map {
-      @media (max-width: $screen-sm-max) {
-        margin-top: ($line-height-computed / 2);
-      }
       position: relative;
       width: 100%;
       padding-bottom: 84%;
       @media (max-width: $screen-xs-max) {
         padding-bottom: 100%;
+        margin-top: 10px;
       }
 
 
