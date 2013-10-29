@@ -1,8 +1,4 @@
-define [
-  'jquery'
-],(
-  $
-) ->
+define [],() ->
   init = ->
     # @TODO add time to url.
     $.ajax

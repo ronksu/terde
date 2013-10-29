@@ -1,8 +1,4 @@
-define [
-  'jquery'
-],(
-  $
-) ->
+define [],() ->
 
   init: ({logicalCloudiness}) ->
     skyCons = new Skycons();

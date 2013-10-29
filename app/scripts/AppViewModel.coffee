@@ -1,5 +1,4 @@
 define [
-  'jquery'
   'knockout'
   'lodash'
   './clockTick'
@@ -8,7 +7,6 @@ define [
   './getNearestPoints'
   './TerraceSearch'
 ],(
-    $
     ko
     _
     clockTick

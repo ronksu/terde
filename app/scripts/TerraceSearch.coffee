@@ -1,9 +1,7 @@
 define [
-  'jquery'
   'knockout'
   'lodash'
 ],(
-  $
   ko
   _
 ) ->
