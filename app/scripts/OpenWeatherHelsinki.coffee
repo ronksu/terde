@@ -12,7 +12,29 @@ define [
     kelvins - 273.15
 
   class OpenWeatherHelsinki
-    constructor: () ->
+    hasWeatherCookie = ->
+      temperature = $.cookie('temperature')
+      cloudiness = $.cookie('cloudiness')
+
+      _.isFinite(temperature) and _.isFinite(cloudiness)
+
+    setWeatherFromCookie: ->
+      temperatureC = $.cookie('temperature')
+      cloudinessC = $.cookie('cloudiness')
+
+      @temperature(temperatureC)
+      @cloudinessInPercent(cloudinessC)
+
+    setWeatherCookie = ({temperature, cloudiness}) ->
+      expiryDate = new Date()
+      expiryDate.setTime(expiryDate.getTime() + (30 * 60 * 1000)) # 30mins
+      expires =
+        expires: expiryDate
+
+      $.cookie('temperature', temperature, expires)
+      $.cookie('cloudiness', cloudiness, expires)
+
+    constructor: ->
       @temperature = ko.observable()
       @temperatureFormatted = ko.computed =>
         if _.isFinite(@temperature())
@@ -30,20 +52,21 @@ define [
           else
             'cloudy'
 
-    init: () ->
-      # @TODO check cookie first
+    init: ->
+      if (hasWeatherCookie())
+        setWeatherFromCookieTO = =>
+          @setWeatherFromCookie()
+        setTimeout(setWeatherFromCookieTO, 0)
 
-      ###
-      weatherDataRequest = $.ajax
-        type: 'GET'
-        url: 'http://api.openweathermap.org/data/2.5/weather?id=658225&callback=?'
-        contentType: "application/json"
-        dataType: 'jsonp'
+      else
+        weatherDataRequest = $.ajax
+          type: 'GET'
+          url: 'http://api.openweathermap.org/data/2.5/weather?id=658225&callback=?'
+          contentType: "application/json"
+          dataType: 'jsonp'
 
-      weatherDataRequest.done (data) =>
-        if _.isFinite(data?.clouds?.all)
-          @cloudinessInPercent(data.clouds.all)
-
-        if _.isFinite(data?.main?.temp)
-          @temperature(data.main.temp)
-      ###
+        weatherDataRequest.done (data) =>
+          if _.isFinite(data?.clouds?.all) and _.isFinite(data?.main?.temp)
+            @cloudinessInPercent(data.clouds.all)
+            @temperature(data.main.temp)
+            setWeatherCookie({temperature: data.main.temp, cloudiness: data.clouds.all})

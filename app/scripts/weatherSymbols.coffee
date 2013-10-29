@@ -6,7 +6,8 @@ define [
 
   init: ({logicalCloudiness}) ->
     skyCons = new Skycons();
-    logicalCloudiness.subscribe (cloudiness) ->
+    logicalCloudinessSubscription = logicalCloudiness.subscribe (cloudiness) ->
+      logicalCloudinessSubscription.dispose()
       # @TODO separate day and night.
       skyconsName = switch
         when cloudiness is "partlyCloudy" then Skycons.PARTLY_CLOUDY_DAY

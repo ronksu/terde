@@ -11,7 +11,8 @@
     "lodash": "~2.1.0",
     "jsUri": "~1.2.2",
     "leaflet-knn": "git@github.com:mapbox/leaflet-knn.git#~0.1.0",
-    "skycons": "git@github.com:darkskyapp/skycons.git"
+    "skycons": "git@github.com:darkskyapp/skycons.git",
+    "jquery.cookie": "~1.4.0"
   },
   "devDependencies": {
     "jquery-mockjax": "~1.5.2"

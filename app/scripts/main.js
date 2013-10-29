@@ -1,6 +1,7 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        jqueryCookie: '../bower_components/jquery.cookie/jquery.cookie',
         bootstrapAffix: '../bower_components/sass-bootstrap/js/affix',
         bootstrapAlert: '../bower_components/sass-bootstrap/js/alert',
         bootstrapButton: '../bower_components/sass-bootstrap/js/button',
@@ -49,6 +50,9 @@ require.config({
         },
         Uri: {
             exports: 'Uri'
+        },
+        jqueryCookie: {
+            deps: ['jquery']
         }
     },
     deps: ['knockout', 'knockoutMapping'],
@@ -57,6 +61,6 @@ require.config({
     }
 });
 
-require(['app'], function (app) {
+require(['app', 'jqueryCookie'], function (app) {
     app.init();
 });
