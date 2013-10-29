@@ -7,6 +7,11 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         contentType: "text/json"
         proxy: 'data/geo.json'
 
+      $.mockjax
+        url: 'http://api.openweathermap.org/data/2.5/*'
+        contentType: "text/json"
+        responseText: '{"coord":{"lon":24.93545,"lat":60.169521},"sys":{"country":"FI","sunrise":1383025029,"sunset":1383057043},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10n"}],"base":"gdps stations","main":{"temp":281.988,"temp_min":281.988,"temp_max":281.988,"pressure":998.73,"sea_level":1002.58,"grnd_level":998.73,"humidity":95},"wind":{"speed":7.15,"deg":249.5},"rain":{"3h":1},"clouds":{"all":92},"dt":1383065423,"id":658225,"name":"Helsinki","cod":200}'
+
     afterEach ->
       $.mockjaxClear()
 
