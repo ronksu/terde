@@ -61,7 +61,7 @@ define [
       else
         weatherDataRequest = $.ajax
           type: 'GET'
-          url: 'http://api.openweathermap.org/data/2.5/weather?id=658225&callback=?'
+          url: 'http://api.openweathermap.org/data/2.5/weather?id=658225&APPID=d7f3a7eeb97b8c3392a4cf98c42d441c&callback=?'
           contentType: "application/json"
           dataType: 'jsonp'
 
