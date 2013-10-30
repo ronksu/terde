@@ -115,6 +115,18 @@
             </div>
 
             <div class="footer">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class=buttons>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#infoModal">
+                                Tietoa palvelusta
+                            </button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#feedbackModal">
+                                Palaute
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <p>Supergissaajat <b>2013</b></p>
             </div>
 
@@ -125,10 +137,31 @@
              <img src="images/partialshadesymbol.svg">
              <img src="images/shadesymbol.svg">
          </div>
+
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Porottaa - terassibongari</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="lead">Porottaa - terassibongarilla löydät vaivatta Kallion aurinkoiset terassit, sekä vertailet lähituntien tilanteita.</p>
+                        <p>Anna sovelluksen käyttää sijaintitietojasi, ja kartta siirtyy olinpaikkaasi. Näet terassit aurinkosymboleina, kartalla voit liikkua hiirellä raahaamalla. Keltaisella auringolla merkatuille terasseille paistaa nyt aurinko, siniset ovat varjossa. Keltasininen aurinko kuvaa terasseja, joiden tila on epävarma. Napsauttamalla symbolia saat esiin baarin nimen ja osoitteen.</p>
+                        <p>Lähimmät terassit on listattu kartan oheen, ja haulla voit etsiä terassillisia baareja nimen ja osoitteen mukaan. Nimen alapuoliset palkit kertovat, kuinka aurinko paistaa terassille lähitunteina. Yksi pala kuvaa yhtä tuntia. Väri noudattaa samaa logiikkaa kuin symboleissa. Palvelusta näet myös tämänhetkisen säätilanteen kaupungissa.</p>
+                        <p><small>&nbsp;</small></p>
+                        <p class="text-muted"><small>© Maanmittauslaitos, Helsingin Kaupungin Rakennusvirasto (aineisto) 2013 │ © Mapbox, OpenStreetMap contributors (kartta) 2013 │ © Openweathermap (säätiedot) 2013 │ © Leaflet.js (javascript) 2013</small></p>
+                        <p class="text-muted"><small>Laura Kauria, Juha Paananen, Mika Korvenranta, Topi Tjukanov, Mert Sasioglu, Timo Rongas 2013.</small></p>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+        <script src="bower_components/sass-bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/leaflet-knn/leaflet-knn.min.js"></script>
         <script src="bower_components/skycons/skycons.js"></script>
 
