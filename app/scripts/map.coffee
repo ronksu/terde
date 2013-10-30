@@ -34,16 +34,16 @@ define ['lodash', './terraceMarker'], (_, terraceMarker) ->
 
   initShowSelectedTerrace = (map, dataLayer, selectedTerrace) ->
     selectedTerrace.subscribe (terrace) ->
-      terraceMarker =
+      selectedTerraceMarker =
         _.find(
           dataLayer.getLayers(),
           (marker) ->
             marker.options.id is terrace.id
         )
 
-      if terraceMarker
-        terraceMarker.openPopup()
-        map.setView(terraceMarker.getLatLng(), 16)
+      if selectedTerraceMarker
+        selectedTerraceMarker.openPopup()
+        map.setView(selectedTerraceMarker.getLatLng(), 16)
 
   init = ({mapData, userLocation, selectedTerrace}) ->
     position = undefined
