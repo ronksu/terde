@@ -60,6 +60,11 @@
 
                                 <div class="col-sm-12">
                                     <div class="container results">
+                                        <div class="row" data-bind="visible: search.results().length === 0">
+                                            <div class="col-sm-12 col-xs-6">
+                                                Ei terasseja.
+                                            </div>
+                                        </div>
                                         <div class="row" data-bind="foreach: pager.pageData">
                                             <div class="col-sm-12 col-xs-6">
                                                 <div class="result" data-bind="click: $parent.focusOnClick">
