@@ -23,3 +23,9 @@ define [
           _.filter mapData(), testPoint
         else
           nearestPoints()
+
+      @resultTitle = ko.computed =>
+        if validSearchString(@criteria())
+          'Hakutulokset'
+        else
+          'Lähimmät terassit'
