@@ -33,9 +33,11 @@ define [
         previousPage = currentPage()
         currentPage(previousPage + number)
 
-      @next = ->
-        changePage(1)
+      @next = =>
+        if not @nextDisabled()
+          changePage(1)
 
-      @previous = ->
-        changePage(-1)
+      @previous = =>
+        if not @previousDisabled()
+          changePage(-1)
 
