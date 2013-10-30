@@ -60,7 +60,7 @@
 
                                 <div class="col-sm-12">
                                     <div class="container results">
-                                        <div class="row" data-bind="foreach: search.results">
+                                        <div class="row" data-bind="foreach: pager.pageData">
                                             <div class="col-sm-12 col-xs-6">
                                                 <div class="result" data-bind="click: $parent.focusOnClick">
                                                     <span class="name" data-bind="text: name"></span>
@@ -71,6 +71,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="container result-pager-container" data-bind="visible: pager.visible">
+                                        <ul class="pager result-pager">
+                                            <li data-bind="css: { disabled: pager.previousDisabled() }, click: pager.previous" class="previous"><a href="#">&larr;</a></li>
+                                            <li data-bind="css: { disabled: pager.nextDisabled() }, click: pager.next" class="next"><a href="#">&rarr;</a></li>
+                                        </ul>
                                     </div>
                                 </div>
 

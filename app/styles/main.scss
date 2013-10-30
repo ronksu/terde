@@ -275,6 +275,43 @@ body {
       text-transform: uppercase;
     }
   }
+
+  .result-pager-container {
+    background-color: white;
+    padding-top: 12px;
+
+    .result-pager {
+      background-color: white;
+      margin: 0;
+      li {
+        > a, .pager li > span {
+          background-color: #6c95cb;
+          border: none;
+          padding: 3px 5px;
+          border-radius: 12px;
+          color: white;
+        }
+
+        > a:hover,
+        > a:focus {
+          background-color: #516f97;
+        }
+
+        &.disabled {
+          background-color: #c3c2c0;
+          > a,
+          > a:hover,
+          > a:focus,
+          > span {
+            color: white;
+            background-color: #c3c2c0;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 

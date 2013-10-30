@@ -6,6 +6,7 @@ define [
   './OpenWeatherHelsinki'
   './getNearestPoints'
   './TerraceSearch'
+  './TerracePager'
 ],(
     ko
     _
@@ -14,6 +15,7 @@ define [
     OpenWeatherHelsinki
     getNearestPoints
     TerraceSearch
+    TerracePager
 ) ->
   class TerdeViewModel
 
@@ -48,6 +50,7 @@ define [
           []
 
       @search = new TerraceSearch({@mapData, @nearestPoints})
+      @pager = new TerracePager({results: @search.results})
 
       @terdeDataMapping =
         create: (data) ->
