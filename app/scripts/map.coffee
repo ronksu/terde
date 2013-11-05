@@ -17,7 +17,11 @@ define ['lodash', './terraceMarker'], (_, terraceMarker) ->
         popupAnchor: [10, -32]
       layer
         .addLayer terraceMarker(point.coordinates, {icon, id: point.id})
-          .bindPopup("<b>#{point.name}</b><br>#{point.address}")
+          .bindPopup(
+            "<b>#{point.name}</b><br>#{point.address}",
+            autoPan: false
+            zoomAnimation: false
+          )
       #@TODO templatize.
 
   initDataLayer = (map, mapData) ->
