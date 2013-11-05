@@ -151,18 +151,22 @@ body {
 
           .shine-level {
             height: 18px;
+            background-color: #ffe633;
 
             &.shine-level-0 {
-              background-color: #000000;
+              background-color: #514b86;
             }
             &.shine-level-1 {
-              background-color: gray;
+              background-color: #514b86;
+              border-width: 0px 34px 18px 0;
+              border-color: transparent #ffe633 transparent transparent;
+              border-style: solid;
             }
             &.shine-level-2 {
-              background-color: orange;
+              background-color: #ffe633;
             }
             &.shine-level-3 {
-              background-color: #ffff00;
+              background-color: #ffe633;
             }
           }
         }
@@ -191,6 +195,10 @@ body {
 
             .shine-level {
               height: 14px;
+              &.shine-level-1 {
+                background-color: #514b86;
+                border-width: 0px 26px 14px 0;
+              }
             }
           }
         }
@@ -218,6 +226,23 @@ body {
 
             .shine-level {
               height: 14px;
+              &.shine-level-1 {
+                background-color: #514b86;
+                border-width: 0px 26px 14px 0;
+              }
+
+            }
+          }
+        }
+      }
+
+      @media (max-width: $screen-xs-max) {
+        .results {
+          .result {
+            .shine-level {
+              &.shine-level-1 {
+                border-width: 0px 23px 18px 0;
+              }
             }
           }
         }
