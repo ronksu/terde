@@ -131,13 +131,22 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.init
           clockFn: (clock) -> clock(13)
 
-    describe.skip "Gets nearest points", ->
+    describe "Gets nearest points", ->
       it "Loads nearest points on load", (done) ->
-        appViewModel = new AppViewModel()
-        appViewModel.nearestPoints.subscribe (data) ->
-          expect(data).to.be.a('array').and.to.have.length(5)
-          done()
+        expectations = []
+        expectations.push []
+        expectations.push ["terde3","terde4","terde5","terde7","terde6"]
 
+        appViewModel = new AppViewModel()
         appViewModel.init
           clockFn: (clock) -> clock(12)
 
+        appViewModel.nearestPoints.subscribe (data) ->
+          expectation = expectations.shift()
+          expect(data).to.be.a('array').and.to.have.length(expectation.length)
+          _(expectation).each((point, index) -> expect(point).to.equal(data[index].name))
+
+          if expectations.length is 0
+            done()
+
+        appViewModel.userLocation(L.latLng(0,0))

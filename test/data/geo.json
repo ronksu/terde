@@ -85,7 +85,7 @@
             "type": "feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.0, 20.5]
+                "coordinates": [10.0, 20.6]
             },
             "properties": {
                 "nimi": "terde5",
@@ -105,7 +105,7 @@
             "type": "feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.0, 20.5]
+                "coordinates": [10.0, 20.9]
             },
             "properties": {
                 "nimi": "terde6",
@@ -125,7 +125,7 @@
             "type": "feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [10.0, 20.5]
+                "coordinates": [10.0, 20.8]
             },
             "properties": {
                 "nimi": "terde7",

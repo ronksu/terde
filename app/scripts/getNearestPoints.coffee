@@ -15,5 +15,5 @@ define [], () ->
       .nearest([userPosition.lat, userPosition.lng], 5)
 
     _.map nearestCoordinates, (nearestPoint) ->
-      _.first(_.where(points, {coordinates: [nearestPoint.lat, nearestPoint.lon]}))
+      _.first(_.where(points, {coordinates: [nearestPoint.lat], coordinates: [nearestPoint.lon]}))
 
