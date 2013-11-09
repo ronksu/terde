@@ -68,16 +68,16 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12">
+                                <div class="col-sm-12" data-bind="with: pager">
                                     <div class="container results">
-                                        <div class="row" data-bind="visible: search.results().length === 0">
+                                        <div class="row" data-bind="visible: pageData().length === 0">
                                             <div class="col-sm-12 col-xs-6">
                                                 Ei terasseja.
                                             </div>
                                         </div>
-                                        <div class="row" data-bind="foreach: pager.pageData">
+                                        <div class="row" data-bind="foreach: pageData">
                                             <div class="col-sm-12 col-xs-6">
-                                                <div class="result" data-bind="click: $parent.focusOnClick">
+                                                <div class="result" data-bind="click: $root.focusOnClick">
                                                     <span class="name" data-bind="text: name"></span>
                                                     <span class="address" data-bind="text: address"></span>
                                                     <div class="row shine-levels"  data-bind="foreach: shine">
@@ -87,10 +87,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="container result-pager-container" data-bind="visible: pager.visible">
+                                    <div class="container result-pager-container" data-bind="visible: visible">
                                         <ul class="pager result-pager">
-                                            <li data-bind="css: { disabled: pager.previousDisabled() }, click: pager.previous" class="previous"><a href="#">&larr;</a></li>
-                                            <li data-bind="css: { disabled: pager.nextDisabled() }, click: pager.next" class="next"><a href="#">&rarr;</a></li>
+                                            <li data-bind="css: { disabled: previousDisabled() }, click: previous" class="previous"><a href="#">&larr;</a></li>
+                                            <li data-bind="css: { disabled: nextDisabled() }, click: next" class="next"><a href="#">&rarr;</a></li>
                                         </ul>
                                     </div>
                                 </div>
