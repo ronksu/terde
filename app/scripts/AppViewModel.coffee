@@ -4,7 +4,7 @@ define [
   './clockTick'
   './terraceDataRequest'
   './OpenWeatherHelsinki'
-  './getNearestPoints'
+  './nearestPoints'
   './TerraceSearch'
   './TerracePager'
 ],(
@@ -13,7 +13,7 @@ define [
     clockTick
     terraceDataRequest
     OpenWeatherHelsinki
-    getNearestPoints
+    nearestPoints
     TerraceSearch
     TerracePager
 ) ->
@@ -43,12 +43,7 @@ define [
 
       @userLocation = ko.observable()
 
-      @nearestPoints = ko.computed =>
-        if (@userLocation() instanceof L.LatLng) and @mapData().length > 0
-          getNearestPoints @userLocation(), @mapData()
-        else
-          []
-
+      @nearestPoints = nearestPoints({@userLocation, @mapData})
       @search = new TerraceSearch({@mapData, @nearestPoints})
       @pager = new TerracePager({results: @search.results})
 

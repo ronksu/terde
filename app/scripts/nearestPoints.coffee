@@ -1,5 +1,5 @@
-# @TODO test!, remove unnecessary conversions, etc..
-define [], () ->
+# @TODO remove unnecessary conversions
+define ['knockout'], (ko) ->
   toGeoJson = (point) ->
     type: "Feature"
     geometry:
@@ -16,4 +16,12 @@ define [], () ->
 
     _.map nearestCoordinates, (nearestPoint) ->
       _.first(_.where(points, {coordinates: [nearestPoint.lat], coordinates: [nearestPoint.lon]}))
+
+  ({userLocation, mapData}) ->
+    ko.computed =>
+      if (userLocation() instanceof L.LatLng) and mapData().length > 0
+        getNearestPoints userLocation(), mapData()
+      else
+        []
+
 
