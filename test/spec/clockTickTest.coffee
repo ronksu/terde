@@ -1,4 +1,3 @@
-# @TODO rename data-source to outdoor seating area or such
 define ['lodash', 'knockout','../scripts/clockTick'], (_, ko, clockTick) ->
   describe "Clock tick", ->
     it "returns current clock", (done) ->

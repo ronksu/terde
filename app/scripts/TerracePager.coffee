@@ -16,6 +16,10 @@ define [
         currentPage(1)
         Math.ceil(results().length / ITEMS_ON_PAGE)
 
+      changePage = (number) ->
+        previousPage = currentPage()
+        currentPage(previousPage + number)
+
       @pageData = ko.computed =>
         offset = (currentPage() - 1)*(ITEMS_ON_PAGE)
         results().slice(offset, offset+ITEMS_ON_PAGE)
@@ -28,10 +32,6 @@ define [
 
       @previousDisabled = ko.computed =>
         currentPage() is 1
-
-      changePage = (number) ->
-        previousPage = currentPage()
-        currentPage(previousPage + number)
 
       @next = =>
         if not @nextDisabled()
