@@ -18,7 +18,7 @@ define ['lodash', 'knockout','../scripts/TerracePager'], (_, ko, TerracePager) -
         expect(data[i - span[0]].name).to.be.a('String').and.to.equal("data#{i}")
         expect(data[i - span[0]].address).to.be.a('String').and.to.equal("data#{i}address")
 
-  describe.only "Terrace pager", ->
+  describe "Terrace pager", ->
     it "returns 1st page on init", ->
       pager = new TerracePager({results: testData})
       expectPageData(pager.pageData(), [0..4])
