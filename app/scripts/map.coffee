@@ -8,10 +8,10 @@ define ['lodash', './terraceMarker'], (_, terraceMarker) ->
       # TODO extract functionality, dont make dupes out of icons
       icon = L.icon
         iconUrl: switch _.first(point.shine)
-          when 3 then 'images/sunsymbol.svg'
-          when 2 then 'images/sunsymbol.svg'
-          when 1 then 'images/partialshadesymbol.svg'
-          else 'images/shadesymbol.svg'
+          when 3 then 'images/sunsymbol_081113_2.svg'
+          when 2 then 'images/sunsymbol_081113_2.svg'
+          when 1 then 'images/partialshadesymbol_081113_2.svg'
+          else 'images/shadesymbol_081113_2.svg'
         iconSize: [45, 64]
         iconAnchor: [21, 51]
         popupAnchor: [10, -32]
