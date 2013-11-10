@@ -24,6 +24,7 @@
     <script>
         // from http://stackoverflow.com/questions/11505554/equivalent-to-rspec-for-arrays-in-chai
         var expect = chai.expect
+        var fail = chai.fail
         chai.Assertion.addMethod('equalAsSets', function (otherArray) {
             var array = this._obj;
 
@@ -46,7 +47,7 @@
 
     <!-- run tests -->
     <script type="text/javascript">
-        require(['sampleTest', 'AppViewModelTest', 'clockTickTest'], function () {
+        require(['sampleTest', 'AppViewModelTest', 'clockTickTest', 'terraceSearchTest'], function () {
             mocha.globals(['jQuery*']);
             mocha.run();
         });
