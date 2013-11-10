@@ -1,21 +1,23 @@
 # @TODO rename data-source to outdoor seating area or such
 define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
-  describe "terde view model tests", ->
+  describe "Terde app view model", ->
     beforeEach ->
       $.mockjax
         url: '/data/terassit_0101.json'
         contentType: "text/json"
         proxy: 'data/geo.json'
+        responseTime:  0
 
       $.mockjax
         url: 'http://api.openweathermap.org/data/2.5/*'
         contentType: "text/json"
         responseText: '{"coord":{"lon":24.93545,"lat":60.169521},"sys":{"country":"FI","sunrise":1383025029,"sunset":1383057043},"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10n"}],"base":"gdps stations","main":{"temp":281.988,"temp_min":281.988,"temp_max":281.988,"pressure":998.73,"sea_level":1002.58,"grnd_level":998.73,"humidity":95},"wind":{"speed":7.15,"deg":249.5},"rain":{"3h":1},"clouds":{"all":92},"dt":1383065423,"id":658225,"name":"Helsinki","cod":200}'
+        responseTime:  0
 
     afterEach ->
       $.mockjaxClear()
 
-    it "initialize model async", (done) ->
+    it "is initialized asynchronously and correctly", (done) ->
       appViewModel = new AppViewModel()
 
       subscribe = ->
@@ -25,7 +27,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
 
       setTimeout subscribe, 0
 
-    describe "Loaded data is correctly parsed", ->
+    describe "parses loaded data correctly", ->
       it "validate raw data", (done) ->
         appViewModel = new AppViewModel()
         appViewModel.locationData.subscribe (data) ->
@@ -72,7 +74,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.init
           clockFn: (clock) -> clock(15)
 
-    describe "shine level is updated according to time", ->
+    describe "updates shine level according to time", ->
       it "hours 12 level 0", (done) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
@@ -131,8 +133,8 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel.init
           clockFn: (clock) -> clock(13)
 
-    describe "Gets nearest points", ->
-      it "Loads nearest points on load", (done) ->
+    describe "gets nearest points", ->
+      it "on load", (done) ->
         expectations = []
         expectations.push []
         expectations.push ["terde3","terde4","terde5","terde7","terde6"]
