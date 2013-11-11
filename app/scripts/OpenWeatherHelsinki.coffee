@@ -17,8 +17,8 @@ define [
       _.isFinite(temperature) and _.isFinite(cloudiness)
 
     setWeatherFromCookie: ->
-      temperatureC = $.cookie('temperature')
-      cloudinessC = $.cookie('cloudiness')
+      temperatureC = parseFloat $.cookie('temperature')
+      cloudinessC = parseInt $.cookie('cloudiness')
 
       @temperature(temperatureC)
       @cloudinessInPercent(cloudinessC)
@@ -65,6 +65,6 @@ define [
 
         weatherDataRequest.done (data) =>
           if _.isFinite(data?.clouds?.all) and _.isFinite(data?.main?.temp)
-            @cloudinessInPercent(data.clouds.all)
-            @temperature(data.main.temp)
-            setWeatherCookie({temperature: data.main.temp, cloudiness: data.clouds.all})
+            @cloudinessInPercent(parseInt(data.clouds.all))
+            @temperature(parseFloat(data.main.temp))
+            setWeatherCookie({temperature: parseFloat(data.main.temp), cloudiness: parseInt(data.clouds.all)})
