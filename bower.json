@@ -12,7 +12,8 @@
     "jsUri": "~1.2.2",
     "leaflet-knn": "git@github.com:mapbox/leaflet-knn.git#~0.1.0",
     "skycons": "git@github.com:darkskyapp/skycons.git",
-    "jquery.cookie": "~1.4.0"
+    "jquery.cookie": "~1.4.0",
+    "fastclick": "~0.6.10"
   },
   "devDependencies": {
     "jquery-mockjax": "~1.5.2"
