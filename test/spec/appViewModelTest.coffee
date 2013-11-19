@@ -21,24 +21,14 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
       appViewModel = new AppViewModel()
 
       subscribe = ->
-        appViewModel.locationData.subscribe (data) ->
+        appViewModel.mapData.subscribe (data) ->
+          console.log data
           done()
         appViewModel.init()
 
       setTimeout subscribe, 0
 
     describe "parses loaded data correctly", ->
-      it "validate raw data", (done) ->
-        appViewModel = new AppViewModel()
-        appViewModel.locationData.subscribe (data) ->
-          flatData = _.flatten(data)
-          expect(flatData).to.be.a('Array').and.to.have.length(7)
-          _.each flatData, (POI) ->
-            expect(POI()).to.have.keys(['geometry', 'properties', 'type', 'id'])
-
-          done()
-        appViewModel.init()
-
       it "validate map data", (done) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
@@ -52,8 +42,8 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           terde1 = _.first(_.flatten(data))
-          expect(terde1.id).to.be.a('string').and.to.equal('22')
-          expect(parseInt(terde1.id)).to.be.a('number').and.to.equal(22)
+          expect(terde1.id).to.be.a('string')
+          expect(parseInt(terde1.id)).to.be.a('number')
           expect(terde1.name).to.be.a('string').and.to.equal('terde1')
           expect(terde1.address).to.be.a('string').and.to.equal('Address of terde1')
           expect(terde1.shine).to.be.a('array').and.to.equalAsSets([2, 3, 1, 0, 0, 0])
