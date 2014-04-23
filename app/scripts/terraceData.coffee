@@ -9,7 +9,11 @@ define [
 ) ->
   getShiningLevels = ({levels, currentHour}) ->
     getShineLevel = (accu, hourAdd) ->
-      accu.push(parseInt(levels[(currentHour + hourAdd) % 23] ? 0))
+      clockHour = (currentHour + hourAdd) % 24
+      levelAndTime =
+        level: parseInt(levels[clockHour] ? 0)
+        hour: clockHour
+      accu.push(levelAndTime)
       accu
 
     _.reduce [0..5], getShineLevel, []

@@ -40,6 +40,22 @@
                     otherArray
             );
         });
+
+        chai.Assertion.addMethod('equalAsSetsOfObjects', function (otherArray, keys) {
+            var array = this._obj;
+
+            expect(array).to.be.an.instanceOf(Array);
+            expect(otherArray).to.be.an.instanceOf(Array);
+
+            for(var i = 0; i < array.length; i++)
+                for(var j = 0; j < keys.length; j++)
+                    this.assert(
+                            array[i][keys[j]] === otherArray[i][keys[j]],
+                            "expected #{this} to be equal to #{exp} (as sets, i.e. no order)",
+                            array,
+                            otherArray
+                    );
+        });
     </script>
 
     <!-- include RequireJs testconfig -->

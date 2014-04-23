@@ -22,7 +22,6 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
 
       subscribe = ->
         appViewModel.mapData.subscribe (data) ->
-          console.log data
           done()
         appViewModel.init()
 
@@ -46,7 +45,17 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
           expect(parseInt(terde1.id)).to.be.a('number')
           expect(terde1.name).to.be.a('string').and.to.equal('terde1')
           expect(terde1.address).to.be.a('string').and.to.equal('Address of terde1')
-          expect(terde1.shine).to.be.a('array').and.to.equalAsSets([2, 3, 1, 0, 0, 0])
+
+          expect(terde1.shine)
+            .to.be.a('array')
+            .and.to.equalAsSetsOfObjects([
+              {hour: 15, level: 2}
+              {hour: 16, level: 3}
+              {hour: 17, level: 1}
+              {hour: 18, level: 0}
+              {hour: 19, level: 0}
+              {hour: 20, level: 0}
+          ], ['hour', 'level'])
           expect(terde1.coordinates).to.be.an('array').and.to.equalAsSets([102, 0.5])
           done()
 
@@ -69,7 +78,16 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           testData = _.first(_.flatten(data))
-          expect(testData.shine).to.be.a('array').and.to.equalAsSets([0, 1, 2, 2, 3, 1, 0])
+          expect(testData.shine).to.be.a('array')
+            .and.to.equalAsSetsOfObjects([
+              {hour: 12, level: 0}
+              {hour: 13, level: 1}
+              {hour: 14, level: 2}
+              {hour: 15, level: 2}
+              {hour: 16, level: 3}
+              {hour: 17, level: 1}
+            ], ['hour', 'level'])
+
           done()
 
         appViewModel.init
@@ -79,7 +97,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           testData = _.first(_.flatten(data))
-          expect(_.first(testData.shine)).to.be.a('number').and.to.equal(1)
+          expect(_.first(testData.shine).level).to.be.a('number').and.to.equal(1)
           done()
 
         appViewModel.init
@@ -89,7 +107,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           testData = _.first(_.flatten(data))
-          expect(_.first(testData.shine)).to.be.a('number').and.to.equal(2)
+          expect(_.first(testData.shine).level).to.be.a('number').and.to.equal(2)
           done()
 
         appViewModel.init
@@ -99,7 +117,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           testData = _.first(_.flatten(data))
-          expect(_.first(testData.shine)).to.be.a('number').and.to.equal(0)
+          expect(_.first(testData.shine).level).to.be.a('number').and.to.equal(0)
           done()
 
         appViewModel.init
@@ -110,7 +128,7 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
         appViewModel = new AppViewModel()
         appViewModel.mapData.subscribe (data) ->
           testData = _.first(_.flatten(data))
-          expect(_.first(testData.shine)).to.be.a('number').and.to.equal(shineLevels.shift())
+          expect(_.first(testData.shine).level).to.be.a('number').and.to.equal(shineLevels.shift())
           if(shineLevels.length is 0)
             done()
 

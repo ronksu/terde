@@ -6,6 +6,17 @@ $section-margin: 20px;
 $section-margin-small: 15px;
 $section-margin-xsmall: 10px;
 
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, right top, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(left, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(left, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(left, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(left, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(bottom, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
 body {
   @media (min-width: $screen-sm) {
     padding: 40px 0;
@@ -117,16 +128,10 @@ body {
         padding-top: 12px;
         .result {
           @include opacity(0.8);
-          .shine-levels {
-            @include opacity(0.6);
-          }
 
           &:hover {
             cursor: pointer;
             @include opacity(1);
-            .shine-levels {
-              @include opacity(1);
-            }
           }
 
           span {
@@ -157,14 +162,14 @@ body {
             height: 18px;
             background-color: #ffe633;
 
+            text-align: center;
+
             &.shine-level-0 {
+              color: white;
               background-color: #514b86;
             }
             &.shine-level-1 {
-              background-color: #514b86;
-              border-width: 0px 34px 18px 0;
-              border-color: transparent #ffe633 transparent transparent;
-              border-style: solid;
+              @include linear-gradient(#858585, #ffe633);
             }
             &.shine-level-2 {
               background-color: #ffe633;
@@ -199,10 +204,7 @@ body {
 
             .shine-level {
               height: 14px;
-              &.shine-level-1 {
-                background-color: #514b86;
-                border-width: 0px 26px 14px 0;
-              }
+              font-size: 10px;
             }
           }
         }
@@ -230,11 +232,7 @@ body {
 
             .shine-level {
               height: 14px;
-              &.shine-level-1 {
-                background-color: #514b86;
-                border-width: 0px 26px 14px 0;
-              }
-
+              font-size: 10px;
             }
           }
         }
@@ -244,9 +242,6 @@ body {
         .results {
           .result {
             .shine-level {
-              &.shine-level-1 {
-                border-width: 0px 23px 18px 0;
-              }
             }
           }
         }

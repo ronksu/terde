@@ -81,7 +81,7 @@
                                                     <span class="name" data-bind="text: name"></span>
                                                     <span class="address" data-bind="text: address"></span>
                                                     <div class="row shine-levels"  data-bind="foreach: shine">
-                                                        <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data}"></div>
+                                                        <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data.level}, text: $data.hour"></div>
                                                     </div>
                                                 </div>
                                             </div>
