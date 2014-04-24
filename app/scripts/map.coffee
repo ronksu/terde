@@ -7,7 +7,7 @@ define ['lodash', './terraceMarker'], (_, terraceMarker) ->
     _.each points, (point) ->
       # TODO extract functionality, dont make dupes out of icons
       icon = L.icon
-        iconUrl: switch _.first(point.shine)
+        iconUrl: switch _.first(point.shine).level
           when 3 then 'images/sunsymbol_131113.png'
           when 2 then 'images/sunsymbol_131113.png'
           when 1 then 'images/partialshadesymbol_131113.png'
