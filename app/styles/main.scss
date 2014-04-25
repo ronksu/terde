@@ -264,6 +264,18 @@ body {
         margin-top: 10px;
       }
 
+      .infobox {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        border-radius: $border-radius-container;
+        background-color: white;
+        z-index: 1;
+
+        img {
+          width: 20px;
+        }
+      }
 
       #map {
         // @TODO not working in Chrome: https://github.com/Leaflet/Leaflet/issues/1549
