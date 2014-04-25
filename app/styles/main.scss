@@ -354,3 +354,18 @@ body {
   }
 
 }
+
+.porottaa-button-group {
+  .btn-porottaa {
+    text-transform: uppercase;
+    border: none;
+    background-color: #43464B;
+    color: #ffe761;
+    border-radius: 0;
+    padding: 6px 0;
+
+    span.caret {
+      border-top: 4px solid #ffe761;
+    }
+  }
+}
