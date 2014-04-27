@@ -12,7 +12,7 @@ define [
       clockHour = (currentHour + hourAdd) % 24
       levelAndTime =
         level: parseInt(levels[clockHour] ? 0)
-        hour: clockHour
+        hour: "#{if clockHour < 10 then '0' else ''}#{clockHour}"
       accu.push(levelAndTime)
       accu
 
