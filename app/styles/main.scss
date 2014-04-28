@@ -368,4 +368,15 @@ body {
       border-top: 4px solid #ffe761;
     }
   }
+
+  .dropdown-menu {
+    border-radius: $border-radius-container;
+    background-color: #ffe761;
+    & > li > a {
+      &:hover, &:focus {
+        background-color: #514b86;
+      }
+    }
+
+  }
 }

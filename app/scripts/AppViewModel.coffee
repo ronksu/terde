@@ -7,6 +7,7 @@ define [
   './nearestPoints'
   './TerraceSearch'
   './TerracePager'
+  './Tabs'
 ],(
     ko
     _
@@ -16,6 +17,7 @@ define [
     nearestPoints
     TerraceSearch
     TerracePager
+    Tabs
 ) ->
   class TerdeViewModel
     constructor: () ->
@@ -26,6 +28,7 @@ define [
       @userLocation = ko.observable()
       @nearestPoints = nearestPoints({@userLocation, @mapData})
 
+      @tabs = new Tabs()
       @search = new TerraceSearch({@mapData, @nearestPoints})
       @pager = new TerracePager({results: @search.results})
       @selectedTerrace = ko.observable()

@@ -69,14 +69,12 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="result-title-container">
-                                        <div class="btn-group porottaa-button-group">
+                                        <div class="btn-group porottaa-button-group" data-bind="with: tabs">
                                           <button type="button" class="btn btn-porottaa dropdown-toggle" data-toggle="dropdown">
-                                            Lähimmät <span class="caret"></span>
+                                            <span data-bind="text: activeTab().label"></span> <span class="caret"></span>
                                           </button>
-                                          <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Lähimmät</a></li>
-                                            <li><a href="#">Porottavimmat</a></li>
-                                            <li><a href="#">Hakutulokset</a></li>
+                                          <ul class="dropdown-menu" role="menu" data-bind="foreach: tabs">
+                                            <li><a href="#" data-bind="click: $parent.activate, text: label, attr: {'data-target': name}"></a></li>
                                           </ul>
                                         </div>
                                         <h5 data-bind="text: search.resultTitle">Lähimmät terassit:</h5>
