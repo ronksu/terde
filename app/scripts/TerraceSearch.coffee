@@ -15,17 +15,11 @@ define [
       point.address?.toLowerCase().indexOf(searchString.toLowerCase()) >= 0
 
   class TerraceSearch
-    constructor: ({mapData, nearestPoints}) ->
+    constructor: ({mapData}) ->
       @criteria = ko.observable()
       @results = ko.computed =>
         if validSearchString(@criteria())
           testPoint = testPointFunctor(@criteria())
           _.filter mapData(), testPoint
         else
-          nearestPoints()
-
-      @resultTitle = ko.computed =>
-        if validSearchString(@criteria())
-          'Hakutulokset'
-        else
-          'Lähimmät terassit'
+          []
