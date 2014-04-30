@@ -15,11 +15,19 @@ define [
       point.address?.toLowerCase().indexOf(searchString.toLowerCase()) >= 0
 
   class TerraceSearch
-    constructor: ({mapData}) ->
+    constructor: ({mapData, onActivate}) ->
       @criteria = ko.observable()
+
+      @criteriaDelayed = ko.computed(@criteria)
+        .extend
+          rateLimit:
+            method: "notifyWhenChangesStop"
+            timeout: 600
+
       @results = ko.computed =>
-        if validSearchString(@criteria())
-          testPoint = testPointFunctor(@criteria())
+        if validSearchString(@criteriaDelayed())
+          onActivate?()
+          testPoint = testPointFunctor(@criteriaDelayed())
           _.filter mapData(), testPoint
         else
           []

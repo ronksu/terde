@@ -29,7 +29,11 @@ define [
       @nearestPoints = nearestPoints({@userLocation, @mapData})
 
       @tabs = new Tabs()
-      @search = new TerraceSearch({@mapData}) #@TODO return results directly
+      @search = new TerraceSearch #@TODO return results directly
+        mapData: @mapData
+        onActivate: =>
+          @tabs.activate(name: 'search')
+
       @pagedSearchResults = new TerracePager({results: @search.results})
       @pagedNearestPoints = new TerracePager({results: @nearestPoints})
       @selectedTerrace = ko.observable()
