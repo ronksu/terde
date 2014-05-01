@@ -5,6 +5,7 @@ define [
   './terraceData'
   './OpenWeatherHelsinki'
   './nearestPoints'
+  './shiniestTerraces'
   './TerraceSearch'
   './TerracePager'
   './Tabs'
@@ -15,6 +16,7 @@ define [
     terraceData
     OpenWeatherHelsinki
     nearestPoints
+    shiniestTerraces
     TerraceSearch
     TerracePager
     Tabs
@@ -27,6 +29,7 @@ define [
       @mapData = terraceData(@clock)
       @userLocation = ko.observable()
       @nearestPoints = nearestPoints({@userLocation, @mapData})
+      @shiniestTerraces = shiniestTerraces(@mapData)
 
       @tabs = new Tabs()
       @search = new TerraceSearch #@TODO return results directly
@@ -36,6 +39,7 @@ define [
 
       @pagedSearchResults = new TerracePager({results: @search.results})
       @pagedNearestPoints = new TerracePager({results: @nearestPoints})
+      @pagedShiniestTerraces = new TerracePager({results: @shiniestTerraces})
       @selectedTerrace = ko.observable()
 
       @focusOnClick = (terrace) =>

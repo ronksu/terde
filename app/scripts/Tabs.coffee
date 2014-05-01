@@ -1,4 +1,3 @@
-# @TODO add tests
 define [
   'knockout'
   'lodash'
