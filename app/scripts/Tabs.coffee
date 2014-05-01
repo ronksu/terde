@@ -23,7 +23,7 @@ define [
           tabItem.active = tabItem.name is tab.name
           tabItem
 
-        @tabs(_.map(@tabs(), activateTab))
+        @tabs(_.map(@tabs.peek(), activateTab))
 
-      @isVisible = (name) ->
+      @isVisible = (name) =>
         _.where(@tabs(), {name})[0].active
