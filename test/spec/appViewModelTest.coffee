@@ -49,12 +49,12 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
           expect(terde1.shine)
             .to.be.a('array')
             .and.to.equalAsSetsOfObjects([
-              {hour: 15, level: 2}
-              {hour: 16, level: 3}
-              {hour: 17, level: 1}
-              {hour: 18, level: 0}
-              {hour: 19, level: 0}
-              {hour: 20, level: 0}
+              {hour: "15", level: 2}
+              {hour: "16", level: 3}
+              {hour: "17", level: 1}
+              {hour: "18", level: 0}
+              {hour: "19", level: 0}
+              {hour: "20", level: 0}
           ], ['hour', 'level'])
           expect(terde1.coordinates).to.be.an('array').and.to.equalAsSets([102, 0.5])
           done()
@@ -80,12 +80,12 @@ define ['lodash', '../scripts/AppViewModel'], (_, AppViewModel) ->
           testData = _.first(_.flatten(data))
           expect(testData.shine).to.be.a('array')
             .and.to.equalAsSetsOfObjects([
-              {hour: 12, level: 0}
-              {hour: 13, level: 1}
-              {hour: 14, level: 2}
-              {hour: 15, level: 2}
-              {hour: 16, level: 3}
-              {hour: 17, level: 1}
+              {hour: "12", level: 0}
+              {hour: "13", level: 1}
+              {hour: "14", level: 2}
+              {hour: "15", level: 2}
+              {hour: "16", level: 3}
+              {hour: "17", level: 1}
             ], ['hour', 'level'])
 
           done()

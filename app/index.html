@@ -69,36 +69,49 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="result-title-container">
-                                        <h5 data-bind="text: search.resultTitle">Lähimmät terassit:</h5>
+                                        <div class="btn-group porottaa-button-group" data-bind="with: tabs">
+                                          <button type="button" class="btn btn-porottaa dropdown-toggle" data-toggle="dropdown">
+                                            <span data-bind="text: activeTab().label"></span> <span class="caret"></span>
+                                          </button>
+                                          <ul class="dropdown-menu" role="menu" data-bind="foreach: tabs">
+                                            <li><a href="#" data-bind="click: $parent.activate, text: label, attr: {'data-target': name}"></a></li>
+                                          </ul>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12" data-bind="with: pager">
-                                    <div class="container results">
-                                        <div class="row" data-bind="visible: pageData().length === 0">
-                                            <div class="col-sm-12 col-xs-6">
-                                                Ei terasseja.
+                                <script type="text/html" id="results-list">
+                                    <!-- ko with: pager -->
+                                        <div class="container results">
+                                            <div class="row" data-bind="visible: pageData().length === 0">
+                                                <div class="col-sm-12 col-xs-6">
+                                                    Ei terasseja.
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="row" data-bind="foreach: pageData">
-                                            <div class="col-sm-12 col-xs-6">
-                                                <div class="result" data-bind="click: $root.focusOnClick">
-                                                    <span class="name" data-bind="text: name"></span>
-                                                    <span class="address" data-bind="text: address"></span>
-                                                    <div class="row shine-levels"  data-bind="foreach: shine">
-                                                        <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data.level}, text: $data.hour"></div>
+                                            <div class="row" data-bind="foreach: pageData">
+                                                <div class="col-sm-12 col-xs-6">
+                                                    <div class="result" data-bind="click: $root.focusOnClick">
+                                                        <span class="name" data-bind="text: name"></span>
+                                                        <span class="address" data-bind="text: address"></span>
+                                                        <div class="row shine-levels"  data-bind="foreach: shine">
+                                                            <div data-bind="attr : { class: 'col-xs-2 no-space shine-level shine-level-' + $data.level}, text: $data.hour"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="container result-pager-container" data-bind="visible: visible">
-                                        <ul class="pager result-pager">
-                                            <li data-bind="css: { disabled: previousDisabled() }, click: previous" class="previous"><a href="#">&larr;</a></li>
-                                            <li data-bind="css: { disabled: nextDisabled() }, click: next" class="next"><a href="#">&rarr;</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                        <div class="container result-pager-container" data-bind="visible: visible">
+                                            <ul class="pager result-pager">
+                                                <li data-bind="css: { disabled: previousDisabled() }, click: previous" class="previous"><a href="#">&larr;</a></li>
+                                                <li data-bind="css: { disabled: nextDisabled() }, click: next" class="next"><a href="#">&rarr;</a></li>
+                                            </ul>
+                                        </div>
+                                    <!-- /ko -->
+                                </script>
+
+                                <div class="col-sm-12" data-bind="template: { name: 'results-list', foreach: pagedNearestPoints, as: 'pager'}, visible: tabs.isVisible('nearest')"></div>
+                                <div class="col-sm-12" data-bind="template: { name: 'results-list', foreach: pagedSearchResults, as: 'pager'}, visible: tabs.isVisible('search')"></div>
+                                <div class="col-sm-12" data-bind="template: { name: 'results-list', foreach: pagedShiniestTerraces, as: 'pager'}, visible: tabs.isVisible('shiniest')"></div>
 
                                 <div class="col-sm-12">
                                     <div class="result-container-bottom"></div>

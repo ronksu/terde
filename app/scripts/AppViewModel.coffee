@@ -5,8 +5,10 @@ define [
   './terraceData'
   './OpenWeatherHelsinki'
   './nearestPoints'
+  './shiniestTerraces'
   './TerraceSearch'
   './TerracePager'
+  './Tabs'
 ],(
     ko
     _
@@ -14,8 +16,10 @@ define [
     terraceData
     OpenWeatherHelsinki
     nearestPoints
+    shiniestTerraces
     TerraceSearch
     TerracePager
+    Tabs
 ) ->
   class TerdeViewModel
     constructor: () ->
@@ -25,9 +29,17 @@ define [
       @mapData = terraceData(@clock)
       @userLocation = ko.observable()
       @nearestPoints = nearestPoints({@userLocation, @mapData})
+      @shiniestTerraces = shiniestTerraces(@mapData)
 
-      @search = new TerraceSearch({@mapData, @nearestPoints})
-      @pager = new TerracePager({results: @search.results})
+      @tabs = new Tabs()
+      @search = new TerraceSearch #@TODO return results directly
+        mapData: @mapData
+        onActivate: =>
+          @tabs.activate(name: 'search')
+
+      @pagedSearchResults = new TerracePager({results: @search.results})
+      @pagedNearestPoints = new TerracePager({results: @nearestPoints})
+      @pagedShiniestTerraces = new TerracePager({results: @shiniestTerraces})
       @selectedTerrace = ko.observable()
 
       @focusOnClick = (terrace) =>
