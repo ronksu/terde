@@ -53,7 +53,11 @@ define ['lodash', './terraceMarker'], (_, terraceMarker) ->
     position = undefined
     map = L
       .mapbox
-      .map('map', 'lacation.map-soa2wal6')
+      .map(
+        'map', 
+        'https://api.mapbox.com/styles/v1/lacation/ckbt6weka0lvh1iohkmi70548/?fresh=true&access_token=pk.eyJ1IjoibGFjYXRpb24iLCJhIjoiSk1xbWNhVSJ9.TRkpQuh19OOgq5Bl-AZz1g',
+        {accessToken: 'pk.eyJ1IjoibGFjYXRpb24iLCJhIjoiSk1xbWNhVSJ9.TRkpQuh19OOgq5Bl-AZz1g'}
+      )
       .setView([60.1708, 24.9375], 12)
       .locate({setView: false, watch: true})
       .on 'locationfound', (e) ->
